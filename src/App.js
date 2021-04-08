@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <div className='bg-blue-700'>
       <Router>
         <Navbar />
         <Hero />
@@ -16,7 +16,7 @@ function App() {
         <Contact />
         <Footer />
       </Router>
-    </>
+    </div>
   );
 }
 
