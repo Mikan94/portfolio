@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: linear-gradient(90deg, #adeed6 0.3%, transparent 0.3%) 80px 0,
+    #dcf8ed;
+  background-size: 330px;
+}
+
+.spacing {
+  margin-top: 4rem;
+}
+
+.btn {
+  background-color: #e14e56;
+  padding: 1rem 2rem 1rem 2rem;
+}

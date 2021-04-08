@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -9,21 +8,21 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <nav>
-      <div className='container mx-auto px-8 flex flex-row flex-wrap justify-between items-center'>
+    <nav className='container mx-auto'>
+      <div className='flex flex-row flex-wrap justify-between items-center md:mx-32'>
         <Link
-          className='flex md:self-center items-center m-4'
+          className='flex mx-8 my-4 md:self-center items-center'
           onClick={closeMobileMenu}
         >
           Anne Minkenberg
         </Link>
-        <div className='md:hidden relative' onClick={handleClick}>
+        <div className='md:hidden relative mx-8' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul
           className={
             click
-              ? 'flex flex-col absolute top-16 w-full bg-red-500 items-center'
+              ? 'flex flex-col top-16 w-full bg-red-500 items-center md:w-auto md:top-0 md:flex md:flex-row md:bg-transparent'
               : 'hidden md:flex md:flex-row'
           }
         >

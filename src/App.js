@@ -1,4 +1,3 @@
-import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
@@ -8,12 +7,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='bg-blue-700'>
+    <div>
       <Router>
         <Navbar />
         <Hero />
+        <div className='spacing'></div>
         <About />
+        <div className='spacing'></div>
         <Contact />
+        <div className='spacing'></div>
         <Footer />
       </Router>
     </div>

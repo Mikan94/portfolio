@@ -1,43 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css';
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <section className='footer-text'>
-        <p>Anne Minkenberg ® 2021</p>
-      </section>
-      <section className='contact'>
-        <div className='contact-wrap'>
-          <div className='contact-icons'>
-            <Link
-              class='contact-icon-link mail'
-              to='/'
-              target='_blank'
-              aria-label='Mail'
-            >
-              <i class='far fa-envelope' />
-            </Link>
-            <Link
-              class='contact-icon-link linkedin'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i class='fab fa-linkedin-in' />
-            </Link>
-            <Link
-              class='contact-icon-link behance'
-              to='/'
-              target='_blank'
-              aria-label='Behance'
-            >
-              <i class='fab fa-behance'></i>
-            </Link>
+    <div className='container mx-auto'>
+      <div className='flex flex-col mx-8 md:flex-row md:justify-between md:mx-32'>
+        <section className='flex justify-center order-2 md:order-1'>
+          <p>Anne Minkenberg ® 2021</p>
+        </section>
+        <section className='flex justify-center order-1 md:order-2'>
+          <div to='/' target='_blank' aria-label='Mail'>
+            <i class='far fa-envelope' />
           </div>
-        </div>
-      </section>
+          <div className='mx-8' to='/' target='_blank' aria-label='LinkedIn'>
+            <i class='fab fa-linkedin-in' />
+          </div>
+          <div to='/' target='_blank' aria-label='Behance'>
+            <i class='fab fa-behance'></i>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

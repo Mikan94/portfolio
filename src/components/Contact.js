@@ -1,16 +1,18 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import '../index.css';
 
 function Contact() {
   return (
-    <section>
-      <div>
-        <p>Interessiert an der Zukunft zu schrauben? 🪛</p>
-        <p>Dann lass uns gerne Unterhalten :)</p>
-      </div>
-      <div>
-        <Button>Brieftaube losschicken</Button>
-        <Button>Flotter Schnack</Button>
+    <section className='container mx-auto'>
+      <div className='flex flex-col items-center mx-8 md:mx-32'>
+        <div className='flex flex-col items-center'>
+          <p>Servus Interessiert an der Zukunft zu schrauben? 🪛</p>
+          <p>Dann lass uns gerne Unterhalten :)</p>
+        </div>
+        <div className='flex flex-row'>
+          <div className='btn mr-4'>Brieftaube losschicken</div>
+          <div className='btn ml-4'>Flotter Schnack</div>
+        </div>
       </div>
     </section>
   );
