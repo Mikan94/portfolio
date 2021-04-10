@@ -8,15 +8,12 @@ function Navbar() {
   const closeMobileMenu = () => setClick(false);
 
   return (
-    <nav className='container mx-auto'>
-      <div className='flex flex-row flex-wrap justify-between items-center md:mx-32'>
-        <Link
-          className='flex mx-8 my-4 md:self-center items-center'
-          onClick={closeMobileMenu}
-        >
+    <nav className='container'>
+      <div className='fixed bg-primary shadow-md flex-row flex-wrap justify-between z-50 w-full py-2 flex items-center px-8 md:px-48'>
+        <Link className='flex' onClick={closeMobileMenu}>
           Anne Minkenberg
         </Link>
-        <div className='md:hidden relative mx-8' onClick={handleClick}>
+        <div className='md:hidden relative' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul
@@ -26,17 +23,17 @@ function Navbar() {
               : 'hidden md:flex md:flex-row'
           }
         >
-          <li className='flex justify-between m-4'>
+          <li className='flex justify-between my-4'>
             <Link className='nav-links' onClick={closeMobileMenu}>
               Projecs
             </Link>
           </li>
-          <li className='flex justify-between m-4'>
+          <li className='flex justify-between mx-8 my-4'>
             <Link className='nav-links' onClick={closeMobileMenu}>
               About
             </Link>
           </li>
-          <li className='flex justify-between m-4'>
+          <li className='flex justify-between my-4'>
             <Link className='nav-links' onClick={closeMobileMenu}>
               Contact
             </Link>
