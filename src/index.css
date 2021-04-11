@@ -9,7 +9,7 @@ body {
 }
 
 .spacing {
-  margin-top: 4rem;
+  margin-top: 32rem;
 }
 
 .btn {
@@ -26,4 +26,39 @@ body {
 .card-size {
   width: 1200px;
   height: 800px;
+}
+
+.bg-nazzle {
+  background: rgb(250, 161, 60);
+  background: linear-gradient(
+    45deg,
+    rgba(250, 161, 60, 1) 0%,
+    rgba(251, 170, 80, 1) 100%
+  );
+}
+.bg-storyline {
+  background: rgb(252, 205, 47);
+  background: linear-gradient(
+    45deg,
+    rgba(252, 205, 47, 1) 0%,
+    rgba(252, 210, 68, 1) 100%
+  );
+}
+
+.bg-smartdress {
+  background: rgb(255, 111, 97);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 111, 97, 1) 0%,
+    rgba(255, 125, 113, 1) 100%
+  );
+}
+
+.bg-hel {
+  background: rgb(255, 24, 191);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 24, 191, 1) 0%,
+    rgba(255, 47, 197, 1) 100%
+  );
 }

@@ -5,6 +5,7 @@ import blobAbout from '../assets/blobAbout.svg';
 function About() {
   return (
     <section className='container mx-auto'>
+      <h1 className='absolute ml-48 -mt-14 z-0 text-7xl'>About</h1>
       <div className='flex flex-col md:flex-row md:justify-around mx-8 md:mx-32'>
         <div className='flex justify-center items-center'>
           <img
@@ -25,7 +26,7 @@ function About() {
             <p>- Lorem ipsum lorem ipsum lorem</p>
             <p>- Lorem ipsum lorem ipsum lorem</p>
           </p>
-          <div className='btn'>Mag du mehr erfahren?</div>
+          <button className='btn'>Mag du mehr erfahren?</button>
         </div>
       </div>
     </section>
