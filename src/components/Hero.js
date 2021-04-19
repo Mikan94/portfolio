@@ -3,7 +3,7 @@ import hero from '../assets/hero.svg';
 
 function Hero() {
   return (
-    <section className='container mx-auto'>
+    <section id='hero' className='container mx-auto'>
       <div className='flex flex-col justify-center'>
         <img
           className='mt-32 mx-8 sm:mx-32 md:mx-48 lg:mx-72 xl:mx-96 2xl:px-32 '

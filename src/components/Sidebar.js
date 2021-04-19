@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import linked from '../assets/linkedin.svg';
+import mail from '../assets/mail.svg';
 
 function Sidebar() {
   return (
@@ -9,7 +10,7 @@ function Sidebar() {
         <ul className='content-center text-2xl'>
           <li className='flex'>
             <Link className=''>
-              <i class='far fa-paper-plane'></i>
+              <img src={mail} />
             </Link>
           </li>
           <li className='flex'>

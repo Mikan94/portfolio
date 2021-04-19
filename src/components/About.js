@@ -4,8 +4,8 @@ import blobAbout from '../assets/blobAbout.svg';
 
 function About() {
   return (
-    <section className='container mx-auto'>
-      <h1 className='line absolute ml-48 -mt-14 z-0 text-xl'>About</h1>
+    <section id='about' className='container mx-auto'>
+      <h1 className='line outline absolute ml-48 -mt-14 z-0 text-xl'>About</h1>
 
       <div className='flex flex-col md:flex-row md:justify-around mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80'>
         <div className='flex justify-center items-center'>
@@ -22,9 +22,6 @@ function About() {
             <p>- Lorem ipsum lorem ipsum lorem</p>
             <p>- Lorem ipsum lorem ipsum lorem</p>
           </p>
-          <button className='btn shadow-md text-white rounded'>
-            Mag du mehr erfahren?
-          </button>
         </div>
       </div>
     </section>

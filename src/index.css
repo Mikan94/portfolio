@@ -12,6 +12,14 @@ body {
   margin-top: 32rem;
 }
 
+.outline {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  font-family: 'Rubik Mono One', sans-serif;
+  letter-spacing: 0.5rem;
+}
+
 .shadow {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -20,11 +28,13 @@ body {
   background-color: #e14e56;
   padding: 1rem 2rem 1rem 2rem;
   max-width: max-content;
+  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
 }
 
 .bg-primary {
   background-color: rgba(53, 66, 73, 0.8);
   backdrop-filter: blur(10px);
+  transition: top 0.6s;
 }
 
 .card-size {
@@ -73,7 +83,7 @@ body {
   white-space: nowrap;
 }
 .line:after {
-  border-top: 1px solid green;
+  border-top: 1px solid white;
   content: '';
   display: table-cell;
   position: relative;
@@ -121,6 +131,10 @@ body {
   text-transform: uppercase;
 }
 
+.active {
+  border-bottom: 3px solid #01bf71;
+}
+
 .nav-link::before {
   transform-origin: 100% 50%;
   transform: scale3d(0, 1, 1);
@@ -132,22 +146,219 @@ body {
   transform: scale3d(1, 1, 1);
 }
 
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  right: -100%;
-  top: 0;
+.nav-enter {
+  opacity: 0;
+}
+
+.nav-enter.active {
   opacity: 1;
+
   transition: all 0.5s ease-in-out;
 }
 
-.nav-menu.active {
-  background-color: rgba(53, 66, 73, 0.8);
-  backdrop-filter: blur(10px);
-  left: 0;
+.nav-exit {
   opacity: 1;
+}
+
+.nav-exit.active {
+  opacity: 0;
   transition: all 0.5s ease-in-out;
-  z-index: 1;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+
+.btn-2 {
+  background: #bf0;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 5px;
+  width: auto;
+  position: relative;
+  min-width: 250px;
+}
+.btn-2::after {
+  content: url(./assets/linkedin.svg);
+  font-size: 1.2em;
+  position: absolute;
+  left: 80%;
+  top: 56%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-30%, -50%);
+}
+.btn-2:hover {
+  transition: all 0.5s;
+  border-radius: 5px;
+  box-shadow: 0px 6px 15px #00f 61;
+  padding: 1.5rem 3rem 1.5rem 1.5rem;
+  color: #fff;
+}
+.btn-2:hover::after {
+  opacity: 1;
+  transition: all 0.5s;
+  color: #fff;
+}
+
+.btn-3 {
+  background: #bf0;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 5px;
+  width: auto;
+  position: relative;
+  min-width: 250px;
+}
+.btn-3::after {
+  content: url(./assets/mail.svg);
+  font-size: 1.2em;
+  position: absolute;
+  left: 80%;
+  top: 56%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-15%, -50%);
+}
+.btn-3:hover {
+  transition: all 0.5s;
+  border-radius: 5px;
+  box-shadow: 0px 6px 15px #00f 61;
+  padding: 1.5rem 3rem 1.5rem 1rem;
+  color: #fff;
+}
+.btn-3:hover::after {
+  opacity: 1;
+  transition: all 0.5s;
+  color: #fff;
+}
+
+.btn-4 {
+  background: #bf0;
+  color: #1d1d1d;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1.5rem;
+  border: 0;
+  transition: all 0.2s;
+  border-radius: 5px;
+  width: auto;
+  position: relative;
+  min-width: 250px;
+}
+.btn-4::after {
+  content: url(./assets/arrow.svg);
+  font-size: 1.2em;
+  position: absolute;
+  left: 80%;
+  top: 56%;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-15%, -50%);
+}
+.btn-4:hover {
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0px 6px 15px #00f 61;
+  padding: 1.5rem 3rem 1.5rem 1rem;
+  color: #fff;
+}
+.btn-4:hover::after {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+}
+
+.card-grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.card-grow:hover {
+  transform: scale(1.02);
 }
