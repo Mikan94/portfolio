@@ -3,21 +3,66 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(90deg, #282e35 0.2%, transparent 0.2%) 80px 0,
-    #2c333b;
-  background-size: 330px;
+  background-color: rgba(44, 51, 59, 1);
+  background-repeat: no-repeat;
+  font-family: 'Rubik', sans-serif;
 }
 
 .spacing {
   margin-top: 32rem;
 }
 
-.outline {
+.color-y {
+  color: #ffbd53;
+}
+
+h1 {
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: transparent;
-  font-size: 4rem;
+  font-size: 64px;
   font-family: 'Rubik Mono One', sans-serif;
-  letter-spacing: 0.5rem;
+  letter-spacing: 8px;
+  word-spacing: -16px;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+h3 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+
+h4 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: white;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: white;
+}
+
+.logo {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.logo:hover {
+  color: #ffbd53;
 }
 
 .shadow {
@@ -51,11 +96,11 @@ body {
   );
 }
 .bg-storyline {
-  background: rgb(252, 205, 39);
+  background: rgb(252, 198, 18);
   background: linear-gradient(
     45deg,
-    rgba(252, 205, 39, 1) 0%,
-    rgba(253, 220, 104, 1) 100%
+    rgba(252, 198, 18, 1) 0%,
+    rgba(253, 215, 89, 1) 100%
   );
 }
 
@@ -87,8 +132,9 @@ body {
   content: '';
   display: table-cell;
   position: relative;
-  top: 0.5em;
-  width: 45%;
+  top: 1em;
+  left: 0.5em;
+  width: 30%;
 }
 
 .line-vert {
@@ -100,15 +146,18 @@ body {
   height: 100px;
   width: 1px;
   background-color: white;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .link {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
   white-space: nowrap;
-  color: var(--color-text);
+  color: white;
 }
 
 .link::before,
@@ -127,12 +176,12 @@ body {
   /* show by default */
 }
 
-.nav-link {
-  text-transform: uppercase;
+.active {
+  border-bottom: 1px solid #ffbd53;
+  color: #ffbd53;
 }
 
-.active {
-  border-bottom: 3px solid #01bf71;
+.nav-link {
 }
 
 .nav-link::before {
@@ -165,104 +214,52 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
+.scroll-ani {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
 }
-button.learn-more {
-  width: 12rem;
-  height: auto;
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
 }
-button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #282936;
-  border-radius: 1.625rem;
-}
-button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: '';
-  top: -0.25rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #282936;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-button:hover .circle {
-  width: 100%;
-}
-button:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
-}
-button:hover .button-text {
-  color: #fff;
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .btn-2 {
-  background: #bf0;
-  color: #1d1d1d;
+  background: #ffbd53;
+  color: #2c333b;
   cursor: pointer;
-  font-size: 1em;
-  padding: 1.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 22px 30px 18px 30px;
   border: 0;
   transition: all 0.5s;
   border-radius: 5px;
   width: auto;
   position: relative;
-  min-width: 250px;
+  min-width: 280px;
 }
 .btn-2::after {
-  content: url(./assets/linkedin.svg);
-  font-size: 1.2em;
+  content: url(./assets/linkedin_grey.svg);
+  font-size: 16px;
   position: absolute;
   left: 80%;
-  top: 56%;
+  top: 54%;
   right: 0;
   bottom: 0;
   opacity: 0;
@@ -271,35 +268,45 @@ button:hover .button-text {
 .btn-2:hover {
   transition: all 0.5s;
   border-radius: 5px;
-  box-shadow: 0px 6px 15px #00f 61;
-  padding: 1.5rem 3rem 1.5rem 1.5rem;
-  color: #fff;
+  box-shadow: 0px 8px 16px rgba(34, 32, 32, 0.8);
+  padding: 22px 50px 18px 30px;
+  color: #2c333b;
 }
 .btn-2:hover::after {
   opacity: 1;
   transition: all 0.5s;
-  color: #fff;
+  color: #2c333b;
+}
+
+.btn-2:focus {
+  outline: none;
+}
+
+.btn-2:focus::after {
+  outline: none;
 }
 
 .btn-3 {
-  background: #bf0;
-  color: #1d1d1d;
+  background: #ffbd53;
+  color: #2c333b;
   cursor: pointer;
-  font-size: 1em;
-  padding: 1.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 22px 30px 18px 30px;
   border: 0;
   transition: all 0.5s;
   border-radius: 5px;
   width: auto;
   position: relative;
-  min-width: 250px;
+  min-width: 280px;
 }
 .btn-3::after {
-  content: url(./assets/mail.svg);
-  font-size: 1.2em;
+  content: url(./assets/mail_grey.svg);
+  font-size: 16px;
   position: absolute;
   left: 80%;
-  top: 56%;
+  top: 55%;
   right: 0;
   bottom: 0;
   opacity: 0;
@@ -308,32 +315,41 @@ button:hover .button-text {
 .btn-3:hover {
   transition: all 0.5s;
   border-radius: 5px;
-  box-shadow: 0px 6px 15px #00f 61;
-  padding: 1.5rem 3rem 1.5rem 1rem;
-  color: #fff;
+  box-shadow: 0px 8px 16px rgba(34, 32, 32, 0.8);
+  padding: 22px 50px 18px 30px;
+  color: #2c333b;
 }
 .btn-3:hover::after {
   opacity: 1;
   transition: all 0.5s;
-  color: #fff;
+  color: #2c333b;
+}
+
+.btn-3:focus {
+  outline: none;
+}
+
+.btn-3:focus::after {
+  outline: none;
 }
 
 .btn-4 {
-  background: #bf0;
-  color: #1d1d1d;
+  background: white;
+  color: #2c333b;
   cursor: pointer;
-  font-size: 1em;
-  padding: 1.5rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 22px 30px 18px 30px;
   border: 0;
   transition: all 0.2s;
   border-radius: 5px;
-  width: auto;
   position: relative;
-  min-width: 250px;
+  width: 200px;
 }
 .btn-4::after {
   content: url(./assets/arrow.svg);
-  font-size: 1.2em;
+  font-size: 16px;
   position: absolute;
   left: 80%;
   top: 56%;
@@ -345,14 +361,22 @@ button:hover .button-text {
 .btn-4:hover {
   transition: all 0.5s ease-in-out;
   border-radius: 5px;
-  box-shadow: 0px 6px 15px #00f 61;
-  padding: 1.5rem 3rem 1.5rem 1rem;
-  color: #fff;
+  box-shadow: 0px 8px 16px rgba(34, 32, 32, 0.2);
+  padding: 22px 50px 18px 30px;
+  color: #2c333b;
 }
 .btn-4:hover::after {
   opacity: 1;
   transition: all 0.2s ease-in-out;
-  color: #fff;
+  color: #2c333b;
+}
+
+.btn-4:focus {
+  outline: none;
+}
+
+.btn-4:focus::after {
+  outline: none;
 }
 
 .card-grow {
@@ -361,4 +385,31 @@ button:hover .button-text {
 
 .card-grow:hover {
   transform: scale(1.02);
+}
+
+#i-mail {
+  stroke: white;
+}
+
+#i-mail:hover {
+  content: url(./assets/mail_yellow.svg);
+}
+
+#i-linked {
+  stroke: white;
+}
+
+#i-linked:hover {
+  content: url(./assets/linkedin_yellow.svg);
+}
+
+.img-change {
+  content: url(./assets/aboutimg.jpg);
+  transition: all 0.5s ease-in-out;
+}
+
+.img-change:hover {
+  content: url(./assets/aboutimg2.jpg);
+  transform: scale(1.02);
+  transition: all 0.5s ease-in-out;
 }

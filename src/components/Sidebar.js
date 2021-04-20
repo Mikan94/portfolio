@@ -7,15 +7,28 @@ function Sidebar() {
   return (
     <section className='fixed hidden md:flex bottom-0 right-12 z-50'>
       <div className='flex flex-col'>
-        <ul className='content-center text-2xl'>
+        <ul className='content-center'>
           <li className='flex'>
-            <Link className=''>
-              <img src={mail} />
+            <Link
+              className='mb-4'
+              onClick={() =>
+                window.open('mailto:minkenberg-anne@web.de', '_blank')
+              }
+            >
+              <img src={mail} id='i-mail' />
             </Link>
           </li>
           <li className='flex'>
-            <Link className=''>
-              <img src={linked} />
+            <Link
+              className='mb-4'
+              onClick={() =>
+                window.open(
+                  'https://www.linkedin.com/in/anne-minkenberg-4a5961161/',
+                  '_blank'
+                )
+              }
+            >
+              <img src={linked} id='i-linked' />
             </Link>
           </li>
           <li className='line-vert'></li>

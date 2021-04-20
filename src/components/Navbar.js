@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as LinkR } from 'react-router-dom';
 import { Link } from 'react-scroll';
+import down from '../assets/down.svg';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -40,16 +41,16 @@ function Navbar() {
         <LinkR>
           <Link
             to='/'
-            className='flex z-50 cursor-pointer'
+            className='flex z-50 logo cursor-pointer'
             smooth={true}
             duration={1000}
             spy={true}
             exact={true}
             offset={-80}
-            activeClass='active'
             onClick={closeMobileMenu}
           >
             Anne Minkenberg
+            <img src={down} className='transform -rotate-45 -mb-6 -ml-2' />
           </Link>
         </LinkR>
 
@@ -59,7 +60,7 @@ function Navbar() {
         <ul
           className={
             click
-              ? 'transition duration-500 ease-in opacity-0 focus:opacity-100 flex flex-col w-full items-center md:w-auto md:top-0 md:flex md:flex-row md:bg-transparent'
+              ? 'flex flex-col w-full items-center md:w-auto md:top-0 md:flex md:flex-row md:bg-transparent'
               : 'hidden md:flex md:flex-row'
           }
         >
@@ -75,22 +76,21 @@ function Navbar() {
               className='link nav-link focus:bg-red-500'
               onClick={closeMobileMenu}
             >
-              Projects
+              Digital 🏠
             </Link>
           </li>
-          <li className='flex justify-between mx-8 my-8 md:my-4'>
+          <li className='flex justify-between mx-8 my-8 md:my-4 md:ml-12 md:mr-12'>
             <Link
               to='about'
               smooth={true}
               duration={1000}
               spy={true}
-              exact={true}
               offset={-80}
               activeClass='active'
               className='link nav-link focus:bg-red-500'
               onClick={closeMobileMenu}
             >
-              About
+              Who I am 👷🏼‍♀️
             </Link>
           </li>
           <li className='flex justify-between my-8 md:my-4'>
@@ -105,7 +105,7 @@ function Navbar() {
               className='link nav-link focus:bg-red-500'
               onClick={closeMobileMenu}
             >
-              Contact
+              Contact 💬
             </Link>
           </li>
         </ul>

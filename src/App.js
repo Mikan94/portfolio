@@ -44,13 +44,10 @@ function App() {
             <div class='spacing' />
             <About />
             <div class='spacing' />
-            <div class='spacing' />
             <Contact />
-
             <Sidebar />
           </Route>
         </Switch>
-        <div class='spacing' />
         <Footer />
       </Router>
     </>

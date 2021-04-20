@@ -1,17 +1,14 @@
 import React from 'react';
-import img from '../assets/aboutimg.jpg';
-import blobAbout from '../assets/blobAbout.svg';
 
 function About() {
   return (
     <section id='about' className='container mx-auto'>
-      <h1 className='line outline absolute ml-48 -mt-14 z-0 text-xl'>About</h1>
+      <h1 className='line ml-28 z-0'>Who I am 👷🏼‍♀️</h1>
 
-      <div className='flex flex-col md:flex-row md:justify-around mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80'>
+      <div className='flex flex-col md:flex-row md:justify-around mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 mt-32'>
         <div className='flex justify-center items-center'>
           <img
-            className='relative h-64 sm:h-80 md:mx-32 2xl:h-full z-10 self-center shadow-lg order-1'
-            src={img}
+            className='img-change relative h-64 sm:h-80 md:mx-32 2xl:h-full z-10 self-center shadow-lg order-1'
             alt='img'
           />
         </div>
