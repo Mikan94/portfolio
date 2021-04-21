@@ -30,41 +30,42 @@ function Navbar() {
   }, [prevScrollPos, visible, handleScroll]);
 
   return (
-    <nav id='/' className='container'>
+    <nav id='/' className='container '>
       <div
         className={
           visible
             ? 'bg-primary fixed shadow-md flex-row flex-wrap justify-between z-40 w-full py-4 md:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'
-            : '-80px'
+            : '-70px'
         }
       >
         <LinkR>
           <Link
             to='/'
-            className='flex z-50 logo cursor-pointer'
+            className='flex z-50 color-y cursor-pointer'
             smooth={true}
             duration={1000}
-            spy={true}
-            exact={true}
-            offset={-80}
             onClick={closeMobileMenu}
           >
             Anne Minkenberg
-            <img src={down} className='transform -rotate-45 -mb-6 -ml-2' />
+            {/* <img src={down} className='transform -rotate-45 -mb-6 -ml-2' /> */}
           </Link>
         </LinkR>
 
-        <div className='md:hidden relative z-50' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+        <div className='lg:hidden relative z-50' onClick={handleClick}>
+          <i
+            className={
+              click ? 'fas fa-times text-white' : 'fas fa-bars text-white'
+            }
+          />
         </div>
         <ul
           className={
             click
-              ? 'flex flex-col w-full items-center md:w-auto md:top-0 md:flex md:flex-row md:bg-transparent'
-              : 'hidden md:flex md:flex-row'
+              ? 'flex flex-col items-center w-full lg:top-0 lg:flex lg:flex-row lg:bg-transparent'
+              : 'hidden lg:flex lg:flex-row'
           }
         >
-          <li className='flex justify-between pt-10 md:pt-0 my-8 md:my-4'>
+          <li className='flex justify-between pt-10 lg:pt-0 my-8 lg:my-4'>
             <Link
               to='projects'
               smooth={true}

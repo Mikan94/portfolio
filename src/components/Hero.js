@@ -7,7 +7,7 @@ function Hero() {
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
 
-    if (currentScrollPos < 300) {
+    if (currentScrollPos < 200) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -27,10 +27,10 @@ function Hero() {
   );
   return (
     <section id='hero' className='container mx-auto'>
-      <div className='flex flex-col justify-center pr-72'>
-        <div class='mx-48 pt-44 z-30'>
-          <p class='text-xl color-y'>Hello I'm Anne</p>
-          <h2 class='text-5xl color-y leading-normal'>
+      <div className='flex flex-col justify-center sm:pr-24 md:pr-32 lg:pr-72'>
+        <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 pt-24 md:pt-44 z-30'>
+          <p class='text-lg lg:text-2xl color-y'>Hello I'm Anne</p>
+          <h2 class='text-3xl lg:text-5xl color-y leading-loose'>
             and transform problems into digital sweet homes 🏠
           </h2>
         </div>
@@ -48,9 +48,13 @@ function Hero() {
         </div>
       </div>
       <section class='container fixed bottom-0 mx-auto'>
-        <div className={visible ? 'flex flex-col items-center mb-4' : 'hidden'}>
+        <div
+          className={
+            visible ? 'flex flex-col items-center mb-4 lg:mb-16 ' : 'hidden'
+          }
+        >
           <p class='mb-4'>Want to see how it looks like? </p>
-          <p class='scroll-ani bounce pl-6 font-bold  '>Scroll 👇</p>
+          <p class='scroll-ani bounce pl-6 font-bold'>Scroll 👇</p>
         </div>
       </section>
     </section>

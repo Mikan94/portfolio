@@ -5,7 +5,7 @@ import mail from '../assets/mail.svg';
 
 function Sidebar() {
   return (
-    <section className='fixed hidden md:flex bottom-0 right-12 z-50'>
+    <section className='fixed hidden lg:flex bottom-0 right-12 z-50'>
       <div className='flex flex-col'>
         <ul className='content-center'>
           <li className='flex'>

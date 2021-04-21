@@ -8,8 +8,10 @@ import hel from '../assets/hel.png';
 function Projects() {
   return (
     <div id='projects' className='container mx-auto'>
-      <h1 className='line ml-28 -mt-16'>Digital 🏠</h1>
-      <div class='mt-32'>
+      <h1 className='line h1-copy mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 text-3xl sm:text-4xl lg:text-5xl'>
+        Digital 🏠
+      </h1>
+      <div class='mt-16 md:mt-24'>
         <CardItems
           bg='bg-smartdress'
           text='Smartdress'

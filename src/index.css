@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: rgba(44, 51, 59, 1);
-  background-repeat: no-repeat;
+  background-color: #2c333b;
   font-family: 'Rubik', sans-serif;
 }
 
@@ -20,6 +19,14 @@ h1 {
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: transparent;
   font-size: 64px;
+  font-family: 'Rubik Mono One', sans-serif;
+  letter-spacing: 8px;
+  word-spacing: -16px;
+}
+
+.h1-copy {
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: #2c333b;
   font-family: 'Rubik Mono One', sans-serif;
   letter-spacing: 8px;
   word-spacing: -16px;
@@ -134,6 +141,7 @@ p {
   position: relative;
   top: 1em;
   left: 0.5em;
+  right: 0.5em;
   width: 30%;
 }
 
