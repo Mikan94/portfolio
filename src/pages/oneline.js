@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Link, useHistory } from 'react-router-dom';
 
-function Songstories() {
+function Oneline() {
   const history = useHistory();
 
   return (
     <div>
-      <h1 class='my-96'>Songstories</h1>
+      <h1 class='my-96'>One Line Cycling Lab</h1>
       <button
         class='btn'
         onClick={() => {
@@ -20,4 +20,4 @@ function Songstories() {
   );
 }
 
-export default Songstories;
+export default Oneline;

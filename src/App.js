@@ -12,8 +12,15 @@ import Nazzle from './pages/Nazzle';
 import Storyline from './pages/Storyline';
 import Hel from './pages/Hel';
 import Songstories from './pages/Songstories';
+import who from './pages/Who';
+import oneline from './pages/oneline';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from 'react-router-dom';
 
 function App() {
   return (
@@ -33,6 +40,8 @@ function App() {
           <Route exact path='/project/storyline' component={Storyline} />
           <Route exact path='/project/hygienelab' component={Hel} />
           <Route exact path='/project/songstories' component={Songstories} />
+          <Route exact path='/project/onelinecycling' component={oneline} />
+          <Route exact path='/whoiam' component={who} />
         </Switch>
         <Switch>
           <Route exact path='/project/smartdress' />
@@ -40,6 +49,8 @@ function App() {
           <Route exact path='/project/storyline' />
           <Route exact path='/project/hygienelab' />
           <Route exact path='/project/songstories' />
+          <Route exact path='/project/onelinecycling' />
+          <Route exact path='/whoiam' />
           <Route path='/'>
             <div class='spacing' />
             <About />

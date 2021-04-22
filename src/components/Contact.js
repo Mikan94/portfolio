@@ -3,7 +3,7 @@ import '../index.css';
 
 function Contact() {
   return (
-    <section id='contact' className='container mx-auto'>
+    <section id='contact' className='container mx-auto pt-64'>
       <h1 className='line h1-copy mx-8 sm:mx-16 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80 text-3xl sm:text-4xl lg:text-5xl'>
         Contact 💬
       </h1>

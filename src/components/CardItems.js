@@ -24,12 +24,6 @@ function CardItems(props) {
               <div className='justify-center flex mt-2 lg:justify-start'>
                 <Link to={props.link} className=''>
                   <button class='btn-4'>Know more</button>
-                  {/* <button class='learn-more'>
-                    <span class='circle' aria-hidden='true'>
-                      <span class='icon arrow'></span>
-                    </span>
-                    <span class='button-text'>Learn More</span>
-                  </button> */}
                 </Link>
               </div>
             </div>

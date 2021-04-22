@@ -28,11 +28,11 @@ function Hero() {
   return (
     <section id='hero' className='container mx-auto'>
       <div className='flex flex-col justify-center sm:pr-24 md:pr-32 lg:pr-72'>
-        <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 pt-24 md:pt-44 z-30'>
-          <p class='text-lg lg:text-2xl color-y'>Hello I'm Anne</p>
-          <h2 class='text-3xl lg:text-5xl color-y leading-loose'>
+        <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 pt-24 md:pt-44 z-30 '>
+          <p class='text-lg lg:text-xl color-y'>Hello I'm Anne</p>
+          <p class='font-semibold color-y lg:text-4xl'>
             and transform problems into digital sweet homes 🏠
-          </h2>
+          </p>
         </div>
 
         <div className='mx-8 mt-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 text-base md:text-lg font-sans'>

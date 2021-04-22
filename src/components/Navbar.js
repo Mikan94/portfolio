@@ -34,11 +34,11 @@ function Navbar() {
       <div
         className={
           visible
-            ? 'bg-primary fixed shadow-md flex-row flex-wrap justify-between z-40 w-full py-4 md:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'
+            ? 'bg-gray-700 bg-opacity-70 backdrop-filter backdrop-blur-md fixed shadow-md flex-row flex-wrap justify-between z-40 w-full h-16 py-4 md:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'
             : '-70px'
         }
       >
-        <LinkR>
+        <LinkR to='/'>
           <Link
             to='/'
             className='flex z-50 color-y cursor-pointer'
@@ -72,9 +72,8 @@ function Navbar() {
               duration={1000}
               spy={true}
               exact={true}
-              offset={-240}
               activeClass='active'
-              className='link nav-link focus:bg-red-500'
+              className='link nav-link'
               onClick={closeMobileMenu}
             >
               Digital 🏠
@@ -86,9 +85,8 @@ function Navbar() {
               smooth={true}
               duration={1000}
               spy={true}
-              offset={-80}
               activeClass='active'
-              className='link nav-link focus:bg-red-500'
+              className='link nav-link'
               onClick={closeMobileMenu}
             >
               Who I am 👷🏼‍♀️
@@ -101,9 +99,8 @@ function Navbar() {
               duration={1000}
               spy={true}
               exact={true}
-              offset={-80}
               activeClass='active'
-              className='link nav-link focus:bg-red-500'
+              className='link nav-link '
               onClick={closeMobileMenu}
             >
               Contact 💬

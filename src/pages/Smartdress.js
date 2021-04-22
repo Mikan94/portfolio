@@ -1,14 +1,21 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function Smartdress() {
+  const history = useHistory();
+
   return (
     <div>
       <h1 class='my-96'>Smartdress</h1>
-      <Link to='/' class='btn'>
+      <button
+        class='btn'
+        onClick={() => {
+          history.goBack();
+        }}
+      >
         Go back
-      </Link>
+      </button>
     </div>
   );
 }
