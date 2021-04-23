@@ -10,7 +10,7 @@ function Who() {
     <section class='container mx-auto'>
       <div>
         <button
-          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8'
+          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 color-bg-y'
           onClick={() => {
             history.push('/');
           }}

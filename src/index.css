@@ -28,6 +28,10 @@ body {
   color: #ffbd53;
 }
 
+.color-g {
+  color: #2c333b;
+}
+
 .border-y {
   border-color: #ffbd53;
   height: 30px;
@@ -81,6 +85,14 @@ h3 {
   line-height: 2.5rem;
 }
 
+.h3-bold {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  line-height: 2.5rem;
+}
+
 h4 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -114,7 +126,6 @@ text {
 }
 
 .btn {
-  background-color: #ffbd53;
   height: 48px;
   width: 48px;
   padding: 12px;
