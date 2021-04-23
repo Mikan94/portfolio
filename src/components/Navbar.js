@@ -14,7 +14,7 @@ function Navbar() {
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScrollPos) {
+    if (prevScrollPos > currentScrollPos || currentScrollPos <= 70) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -34,14 +34,14 @@ function Navbar() {
       <div
         className={
           visible
-            ? 'bg-gray-700 bg-opacity-70 backdrop-filter backdrop-blur-md fixed shadow-md flex-row flex-wrap justify-between z-40 w-full h-16 py-4 md:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'
+            ? 'bg-primary text-lg font-semibold fixed shadow-md flex-row flex-wrap justify-between z-40 w-full py-6 lg:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'
             : '-70px'
         }
       >
         <LinkR to='/'>
           <Link
             to='/'
-            className='flex z-50 color-y cursor-pointer'
+            className='flex z-50 lg:text-xl color-y cursor-pointer'
             smooth={true}
             duration={1000}
             onClick={closeMobileMenu}
@@ -61,7 +61,7 @@ function Navbar() {
         <ul
           className={
             click
-              ? 'flex flex-col items-center w-full lg:top-0 lg:flex lg:flex-row lg:bg-transparent'
+              ? 'flex flex-col items-center w-full h-screen z-50 lg:top-0 lg:flex lg:flex-row lg:bg-transparent'
               : 'hidden lg:flex lg:flex-row'
           }
         >
@@ -73,7 +73,7 @@ function Navbar() {
               spy={true}
               exact={true}
               activeClass='active'
-              className='link nav-link'
+              className='text-xl lg:text-lg link nav-link'
               onClick={closeMobileMenu}
             >
               Digital 🏠
@@ -86,7 +86,7 @@ function Navbar() {
               duration={1000}
               spy={true}
               activeClass='active'
-              className='link nav-link'
+              className='text-xl lg:text-lg link nav-link'
               onClick={closeMobileMenu}
             >
               Who I am 👷🏼‍♀️
@@ -100,7 +100,7 @@ function Navbar() {
               spy={true}
               exact={true}
               activeClass='active'
-              className='link nav-link '
+              className='text-xl lg:text-lg link nav-link '
               onClick={closeMobileMenu}
             >
               Contact 💬

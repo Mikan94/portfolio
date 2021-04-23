@@ -11,10 +11,10 @@ function About() {
   }
 
   return (
-    <section id='about' className='container mx-auto pt-64'>
-      <div className='line h1-copy mx-8 sm:mx-16 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80 text-3xl sm:text-4xl lg:text-5xl'>
+    <section id='about' className='container mx-auto'>
+      <h1 className='text-center text-4xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80 '>
         Who I am 👷🏼‍♀️
-      </div>
+      </h1>
 
       <div className='flex flex-col md:flex-row md:justify-around mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 mt-16 md:mt-24'>
         <div className='flex justify-center items-center'>
@@ -23,12 +23,11 @@ function About() {
             alt='img'
           />
         </div>
-        <div className='flex flex-col items-center order-2 text-base text-center z-10 px-2 mt-16 md:ml-8 xl:pr-16'>
-          <p className=''>
-            Do you want to know more about me? Then I have prepared 17 facts
-            about me for you.
-            <p class='mt-4'>Little sneak peek: 👩‍💻🚴‍♀️🎧</p>
-          </p>
+        <div className='flex flex-col order-2 text-center items-center md:my-auto md:z-10 mt-8 px-2 md:ml-8 xl:pr-16'>
+          <p className=''>Do you want to know more about me?</p>
+          <p> Then I prepared 19 snippets about me for you.</p>
+          <p class='mt-4'>Little sneak peek: 👩‍💻🚴‍♀️🎧</p>
+
           <Link to='/whoiam'>
             <button
               class='btn-4-y mt-8'
@@ -36,7 +35,7 @@ function About() {
                 history.goForward();
               }}
             >
-              Know more
+              Get more
             </button>
           </Link>
         </div>

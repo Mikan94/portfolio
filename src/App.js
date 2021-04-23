@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Sidebar from './components/Sidebar';
 import Projects from './components/Projects';
+import ScrollToTop from './components/ScrollToTop';
 
 import Smartdress from './pages/Smartdress';
 import Nazzle from './pages/Nazzle';
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
+        <ScrollToTop />
         <Switch>
           <Route exact path='/'>
             <Navbar />

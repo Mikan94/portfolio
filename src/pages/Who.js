@@ -10,68 +10,62 @@ function Who() {
     <section class='container mx-auto'>
       <div>
         <button
-          class='btn fixed z-40 top-4 right-4'
+          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8'
           onClick={() => {
-            history.goBack();
+            history.push('/');
           }}
         >
           <img src={x} />
         </button>
       </div>
-      <div className='flex flex-col lg:flex-row md:items-center mx-8 sm:mx-16 md:mx-28 lg:mx-16 xl:mx-48 2xl:mx-80 mt-16 md:mt-24'>
-        <div className='flex mt-8 justify-center md:mx-32 items-center'>
+      <div className='flex flex-col lg:flex-row mx-8 sm:mx-16 md:mx-28 xl:mx-48 2xl:mx-80 mt-16 md:mt-24 lg:mt-8'>
+        <div className='flex mt-8 justify-center items-center'>
           <img
-            className='img-change relative w-80 sm:w-80 md:mx-32 2xl:w-full z-10 self-center shadow-lg order-1'
+            className='img-change relative w-80 sm:w-80 lg:w-96 2xl:ml-64 z-10 self-center shadow-lg order-1 lg:ml-40 lg:mr-16 xl:ml-64 xl:mr-16'
             alt='img'
           />
         </div>
-        <div className='flex flex-col items-center text-center lg:text-left order-2 z-10 mt-8 sm:mx-12 lg:-ml-16 md:mt-16'>
-          <p className='leading-relaxed'>
-            I’m a creative solution seeker based in Heinsberg.
-          </p>
-          <p className='mb-4 leading-relaxed'>
+        <div className='flex flex-col items-center sm:items-start order-2 z-10 mt-8 sm:mx-4 lg:ml-24 lg:mr-8 xl:ml-40 md:mt-16 lg:mt-20 xl:mt-8'>
+          <p className=''>I’m a creative solution seeker based in Heinsberg.</p>
+          <p className='mb-8'>
             My focus goes to creating a smart product usage for people.
           </p>
-          <p className='mb-4 leading-relaxed'>
+          <p className='mb-8'>
             Currently I got my sciene-degree in human-machine-interaction or
             more simply said psychology-computer sciene-design.
           </p>
-          <p className='mb-4 leading-relaxed'>
-            With a 6 years of experience in business and design as rookie as
-            Trainee/ working student, I’m now looking for my first full-time
+          <p className=''>
+            With a 6 years of work experience in business and design as rookie
+            as Trainee/ working student, I’m now looking for my first full-time
             adventure.
           </p>
         </div>
       </div>
-      <div className='flex flex-col items-center lg:items-start order-2 text-base z-10 mt-32 sm:mx-12 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
-        <ul class='list-disc list-outside text-white'>
-          <h2 class='leading-normal text-center mx-8 text-2xl color-y'>
-            How I think about design 👩‍💻
-          </h2>
-          <li class='font-thin mt-8 ml-16 mr-8'>
+      <div className='flex flex-col items-center order-2 text-base z-10 mt-32 sm:mx-12 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
+        <ul class='list-none list-outside text-white'>
+          <h2 class='mx-8 color-y'>How I think about design 👩‍💻</h2>
+          <li class='mt-8 ml-8 mr-8'>
             UX/ UI Design is like architecture for digital products
           </li>
-          <li class='font-thin mt-4 ml-16 mr-8'>
+          <li class='mt-8 ml-8 mr-8'>
             Users should feel comfortable and lighthearted during use
           </li>
-          <li class='font-thin mt-4 ml-16 mr-8'>
+          <li class='mt-8 ml-8 mr-8'>
             The use of a product should give the feeling of coming home to your
             own four walls
           </li>
-          <li class='font-thin mt-4 ml-16 mr-8'>
-            and it all started when I discovered more and more inefficient
+          <li class='mt-8 ml-8 mr-8'>
+            And it all started when I discovered more and more inefficient
             processes that needed a smart update to be more resource saving
           </li>
         </ul>
       </div>
 
-      <div className='flex flex-col order-2 text-base z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
-        <h2 class='leading-normal text-center lg:items-center mx-8 text-2xl color-y'>
-          What I've done before 👷🏼‍♀️
-        </h2>
-        <ul class='list-disc list-outside text-white'>
-          <li class='flex flex-col lg:flex-row font-thin mt-8 ml-16 md:mx-16 sm:ml-0 sm:mr-0 lg:ml-16'>
-            <text>1 year (2020 - 2021)</text>
+      <div className='flex flex-col order-2 z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
+        <h2 class='mx-8 color-y'>What I've done before 👷🏼‍♀️</h2>
+        <ul class='list-none list-outside text-white'>
+          <li class='flex flex-col lg:flex-row mt-8 mx-8'>
+            <li>1 year (2020 - 2021)</li>
             <text>
               <span
                 class='lg:pl-2 link-ex'
@@ -82,8 +76,8 @@ function Who() {
             </text>
             <text class='lg:pl-2 '>// Produtct designer</text>
           </li>
-          <li class='flex flex-col lg:flex-row font-thin mt-8 ml-16 md:mx-16 sm:ml-0 sm:mr-0 lg:ml-16'>
-            <text>2,5 years (2017 - 2020)</text>
+          <li class='flex flex-col lg:flex-row mt-8 mx-8'>
+            <li>2,5 years (2017 - 2020)</li>
             <text>
               <span
                 class='lg:pl-2 link-ex'
@@ -96,8 +90,8 @@ function Who() {
             </text>
             <text class='lg:pl-2'>// Product designer</text>
           </li>
-          <li class='flex flex-col lg:flex-row font-thin mt-8 ml-16 md:mx-16 sm:ml-0 sm:mr-0 lg:ml-16'>
-            <text>3 years</text>
+          <li class='flex flex-col lg:flex-row mt-8 mx-8'>
+            <li>3 years (2013 - 2016)</li>
             <text>
               <span
                 class='lg:pl-2 link-ex'
@@ -113,33 +107,29 @@ function Who() {
         </ul>
       </div>
 
-      <div className='flex flex-col order-2 text-base z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
-        <h2 class='leading-normal text-center lg:items-center mx-8 text-2xl color-y'>
-          Getting my first knowledge 👩‍🏫
-        </h2>
-        <ul class='list-disc list-outside text-white'>
-          <li class='flex flex-col font-thin mt-8 ml-16 mr-8 sm:ml-0 sm:mr-0 md:mx-16 lg:ml-16'>
-            <text>Hochschule Ruhr West (2016 - 2021)</text>
-            <text>// Bachelor of Science</text>
-            <text>// Human-machine-interaction</text>
+      <div className='flex flex-col order-2 z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
+        <h2 class='mx-8 color-y'>Getting my first knowledge 👩‍🏫</h2>
+        <ul class='list-none list-outside text-white'>
+          <li class='flex flex-col lg:flex-row mt-8 mx-8 sm:mx-8'>
+            <li>Hochschule Ruhr West (2016 - 2021)</li>
+            <text class='lg:pl-2'>// Bachelor of Science</text>
+            <text class='lg:pl-2'>// Human-machine-interaction</text>
           </li>
-          <li class='flex flex-col lg:flex-row font-thin mt-8 ml-16 mr-8 sm:ml-0 sm:mr-0 md:mx-16 lg:ml-16'>
-            <text>Gesamtschule (2011 - 2012)</text>
+          <li class='flex flex-col lg:flex-row mt-8 mx-8 sm:mx-8'>
+            <li>Gesamtschule (2011 - 2012)</li>
             <text class='lg:pl-2'>// without degree</text>
           </li>
-          <li class='flex flex-col lg:flex-row font-thin mt-8 ml-16 mr-8 sm:ml-0 sm:mr-0 md:mx-16 lg:ml-16'>
-            <text>Hauptschule (2006 - 2011)</text>
+          <li class='flex flex-col lg:flex-row mt-8 mx-8 sm:mx-8'>
+            <li>Hauptschule (2006 - 2011)</li>
             <text class='lg:pl-2'>// Fachoberschulreife</text>
           </li>
         </ul>
       </div>
-      <div className='flex flex-col items-center lg:items-start order-2 text-base z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
+      <div className='flex flex-col order-2 z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
         <ul class='list-none list-outside text-white'>
-          <h2 class='leading-normal text-center mx-8 text-2xl color-y'>
-            Outside of work
-          </h2>
+          <h2 class='mx-8 color-y'>Outside of work 🎁</h2>
 
-          <li class='list-disc font-thin mt-4 ml-16 mr-8'>
+          <li class='mt-8 ml-8 mr-8'>
             If it's sunny outside, I'm most likely on an adventure with my bike
             right now - capturing and pedaling as many sun
             <span
@@ -153,9 +143,9 @@ function Who() {
             for a year 🚴‍♀️💨
           </li>
 
-          <li class='list-disc font-thin mt-4 ml-16 mr-8'>
+          <li class='mt-4 ml-8 mr-8'>
             <li>
-              I lose my mind on
+              I lose my mind to
               <span
                 class='ml-1 link-ex'
                 onClick={() =>
@@ -173,25 +163,29 @@ function Who() {
               and a 5-second dance may also not be missing
             </li>
           </li>
-          <li class='list-disc font-thin mt-4 ml-16 mr-8'>
+          <li class='list-none mt-4 ml-8 mr-8'>
             Currently learning frontend dev (react.js) to be finally able to
             realize some ideas of mine
           </li>
-          <li class='list-disc font-thin mt-4 ml-16 mr-8'>
+          <li class='list-none mt-4 ml-8 mr-8'>
             Like you have read before - I also inspired by the smart
             architecture of tiny houses
           </li>
 
-          <li class='font-semibold mt-16 ml-16 mr-8'>
+          <li class='font-bold text-md mt-12 ml-8 mr-8'>
             Bonus and funniest facts about me 🥳
           </li>
-          <li class='list-disc font-thin mt-4 ml-16 mr-8'>
+          <li class='mt-4 ml-8 mr-8'>
             I can't really smell and taste, so cooking with me is a lot of fun
           </li>
-          <li class='list-disc font-thin mt-4 ml-16 mr-8'>
+          <li class='mt-4 ml-8 mr-8'>
             I am so small that I can walk under a volleyball net without bending
             down
           </li>
+          {/* <li class='list-disc mt-8 ml-8 mr-8'>
+            Can play a bit soccer and table tennis and it's enough to beat some
+            guys
+          </li> */}
         </ul>
       </div>
     </section>

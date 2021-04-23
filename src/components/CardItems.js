@@ -16,7 +16,7 @@ function CardItems(props) {
           <div className='flex flex-col justify-between order-2 lg:order-1 mb-12 sm:my-16 mx-8 sm:mx-16'>
             <div className=''>
               <h2 className='z-30 absolute text-3xl'>{props.text}</h2>
-              <h3 className='mt-10'>{props.subtitle}</h3>
+              <h4 className='mt-10'>{props.subtitle}</h4>
               <p className='mt-4 mb-8'>{props.description}</p>
             </div>
 
