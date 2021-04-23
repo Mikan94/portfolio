@@ -12,7 +12,7 @@ function About() {
 
   return (
     <section id='about' className='container mx-auto'>
-      <h1 className='text-center text-4xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80 '>
+      <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80 '>
         Who I am 👷🏼‍♀️
       </h1>
 

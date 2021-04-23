@@ -4,7 +4,7 @@ import '../index.css';
 function Contact() {
   return (
     <section id='contact' className='container mx-auto'>
-      <h1 className='text-center text-4xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 '>
+      <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 '>
         Contact 💬
       </h1>
       <div className='flex flex-col text-center px-4 mx-8 sm:mx-16 mt-16 md:mt-24 lg:px-32'>

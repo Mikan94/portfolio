@@ -28,7 +28,7 @@ function Hero() {
   return (
     <section id='hero' className='container mx-auto'>
       <div className='flex flex-col text-center'>
-        <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-80 2xl:mx-80 pt-24 md:pt-36 '>
+        <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-80 2xl:mx-80 pt-36'>
           <h3 class='color-y'>Hello, I'm Anne</h3>
           <h2 class='color-y'>
             and transform problems into digital sweet homes 🏠

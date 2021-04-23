@@ -8,7 +8,7 @@ import hel from '../assets/hel.png';
 function Projects() {
   return (
     <div id='projects' className='container mx-auto'>
-      <h1 className='text-center text-4xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80'>
+      <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80'>
         Digital 🏠
       </h1>
       <div class='mt-16 md:mt-24'>
