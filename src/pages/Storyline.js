@@ -3,7 +3,7 @@ import './Storyline.css';
 import storyline from '../assets/storyline.png';
 import x from '../assets/x.svg';
 
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function Storyline() {
   const history = useHistory();
@@ -37,7 +37,7 @@ function Storyline() {
     <div>
       <div>
         <button
-          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white'
+          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out'
           onClick={() => {
             history.push('/');
           }}
@@ -46,7 +46,7 @@ function Storyline() {
         </button>
       </div>
 
-      <div class='hero-bg flex flex-row justify-center py-32'>
+      <div class='hero-bg-sl flex flex-row justify-center py-32'>
         <div class='flex flex-col pt-16'>
           <h2>SmartDress</h2>
           <p>Here is a fucking description</p>

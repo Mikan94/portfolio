@@ -22,15 +22,6 @@ function Projects() {
         />
         <div class='card-spacing' />
         <CardItems
-          bg='bg-nazzle'
-          text='Nazzle'
-          subtitle='Project (Study)'
-          description='Playfully explore nature and solve exciting puzzles with augmented reality'
-          src={nazzle}
-          link='/project/nazzle'
-        />
-        <div class='card-spacing' />
-        <CardItems
           bg='bg-storyline'
           text='Storyline'
           subtitle='Foundation project (Study)'
@@ -39,13 +30,22 @@ function Projects() {
           link='/project/storyline'
         />
         <div class='card-spacing' />
-        <CardItems
+        {/* <CardItems
           bg='bg-hel'
           text='Hygiene Lab'
           subtitle='Client work'
           description='Creating a storytelling experience of visiting public restrooms with contactless products'
           src={hel}
           link='/project/hygienelab'
+        />
+        <div class='card-spacing' /> */}
+        <CardItems
+          bg='bg-nazzle'
+          text='Nazzle'
+          subtitle='Project (Study)'
+          description='Playfully explore nature and solve exciting puzzles with augmented reality'
+          src={nazzle}
+          link='/project/nazzle'
         />
       </div>
     </div>

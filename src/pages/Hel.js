@@ -14,7 +14,7 @@ function Hel() {
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
 
-    if (currentScrollPos < 200) {
+    if (currentScrollPos < 100) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -37,7 +37,7 @@ function Hel() {
     <div>
       <div>
         <button
-          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white'
+          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out'
           onClick={() => {
             history.push('/');
           }}
@@ -46,9 +46,9 @@ function Hel() {
         </button>
       </div>
 
-      <div class='flex flex-row justify-center py-32'>
+      <div class='hero-bg-h flex flex-row justify-center py-32'>
         <div class='flex flex-col pt-16'>
-          <h2>SmartDress</h2>
+          <h2>Hygiene Experience Lab</h2>
           <p>Here is a fucking description</p>
         </div>
         <img src={hel} class='pl-32' />
@@ -60,15 +60,12 @@ function Hel() {
       <div class='flex flex-col lg:flex-row'>
         <div class='flex flex-row'>
           <div class='flex-col'>
-            <h2 class='color-y'>Beschreibung</h2>
+            <h2 class='color-y'>Overview</h2>
             <p>
-              SmartDress ist ein mobiler Outfit-Berater, der den Nutzenden
-              Outfits anhand der eigenen Kleidungsstücken empfiehlt. Sie soll
-              den Nutzenden täglich bei der Beantwortung der Fragen „Was ziehe
-              ich heute an?“ helfen. Der Outfit-Berater berücksichtigt die
-              aktuellen Bedürfnisse der Nutzenden bei der
-              Outfitszusammenstellung. Das Integrieren der eigenen
-              Kleidungsstücke erfolgt durch ein Foto und kurze Angaben.
+              The Hygiene Experience Lab is a project that aims to turn the use
+              of public toilets into an experience. For this purpose, premises
+              are to be technically converted so that an experience is created
+              where the users can use contactless control elements.
             </p>
           </div>
           <div class='flex flex-col'>
@@ -80,63 +77,50 @@ function Hel() {
       <div class='flex flex-row'>
         <div class='flex flex-col'>
           <h3>Project</h3>
-          <p>Bachelor Thesis</p>
+          <p>Client work</p>
         </div>
         <div class='flex flex-col'>
           <h3>Time</h3>
-          <p>10 weeks (2021)</p>
+          <p>3 month (2019 - 2020)</p>
         </div>
         <div class='flex flex-col'>
           <h3>Role</h3>
-          <p>UX Researcher</p>
-          <p>UX Designer</p>
           <p>UI Designer</p>
         </div>
         <div class='flex flex-col'>
-          <h3>Used methods</h3>
-          <p>Interviews</p>
-          <p>Marktanalyse</p>
-          <p>Person</p>
-          <p>Mockups</p>
+          <h3>What I have done</h3>
+          <p>Brand Design</p>
+          <p>Styleguide</p>
+          <p></p>
+          <p>Mockups (Mobile & Desktop)</p>
         </div>
       </div>
 
       <div>
-        <h2>Was ziehe ich heute an?</h2>
+        <h2>Making public toilets great again 🥳</h2>
         <div class='flex flex-row'>
           <div class='flex flex-col'>
             <h3>Problem</h3>
             <p>
-              Täglich stehen die Menschen vor ihrem Kleiderschrank und wissen
-              nicht was sie anziehen sollen. In der heutigen Zeit haben die
-              Menschen ausreichend Kleidungsstücke zum anziehen. Doch fehlt es
-              ihnen an Kreativität und Orientierungspunkten zum geschickten
-              kombinieren einzelner Kleidungsstücke. Also wie kann das Dilemma
-              beseitigt werden?
+              Many people, especially women, shy away from public toilets when
+              they need to use them. The sight of public toilets are often
+              disgusting and rather invite to turn back. Public toilets should
+              be hygienic and clean.
             </p>
           </div>
           <div class='flex flex-col'>
-            <h3>Ziel</h3>
+            <h3>Solution</h3>
             <p>
-              Mein Ziel war es herauszufinden wie der Mensch schrittweise bei
-              der Outfiterstellung vorgeht welche Indikatoren dabei relevant
-              sind und ob eine mobile Anwendung als möglicher Lösungsansatz
-              helfen kann.
+              In the first step of the solution, the Hygiene Experience Lab
+              should be a contact point for companies that offer products for
+              the hygiene sector. Therefore, a landing page was developed that
+              invites clients and interested companies to collaborate.
+              Furthermore, a community was to be created via the landing page,
+              which would exchange information and benefit from each other in
+              the hygiene sector.
             </p>
           </div>
         </div>
-      </div>
-
-      <div class='flex flex-col'>
-        <h3>Pre Story</h3>
-        <p>
-          Nach den ersten Gehversuchen 2017 entschloss ich mich diesem Projekt
-          in meiner Bachelor Thesis ausführlicher und vor allem strukturierter
-          zu widmen. Es entstand eine mobile Anwendung mit dem Namen SmartDress,
-          die als Outfit-Berater den Nutzenden zur Seite stehen soll. Sie
-          schlägt den Nutzenden Outfits anhand ihrer eigenen Kleidungsstücke
-          vor.
-        </p>
       </div>
 
       <div class='flex flex-col'>
@@ -146,29 +130,103 @@ function Hel() {
         <div class='flex flex-row w-screen'>
           <img src={hel} />
           <img src={hel} />
-          <img src={hel} />
-          <img src={hel} />
         </div>
         <button>bring me to solution</button>
       </div>
 
-      <div class='flex flex-row'>
+      <div class='flex flex-col'>
+        <h2>Project scope</h2>
+        <div class='flex flex-row'>
+          <div class='flex flex-col'>
+            <h3>Branding</h3>
+            <p>
+              The logo was to become self-explanatory, while the brand’s
+              terminology was rather invisible/not tangible, and the challenge
+              was to visualize it.
+            </p>
+          </div>
+          <div class='flex flex-col'>
+            <h3>UI Design</h3>
+            <p>
+              The Langingpage should become a OnePager, so that the user gets
+              information at a glance and gets it closer by storytelling.
+            </p>
+          </div>
+          <div class='flex flex-col'>
+            <h3>Video</h3>
+            <p>
+              In order to better present the problem statement, public toilets
+              were visited and recorded on video.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class='flex flex-col'>
+        <h2>Brand Identity - Styleguide</h2>
         <div class='flex flex-col'>
-          <h2>10</h2>
-          <p>User surveys</p>
+          <h3>logo</h3>
+          <img src={hel} />
+          <p>
+            The logo is a combination of symbols and font. This is to ensure
+            that the word mark paired with the symbols leads to faster
+            imprinting.
+          </p>
+          <img src={hel} />
         </div>
         <div class='flex flex-col'>
-          <h2>10</h2>
-          <p>User interviews</p>
+          <h3>Symbol</h3>
+          <div class='flex flex-col'>
+            <img src={hel} />
+            <p>
+              The symbol represents a soap bubble that metaphorically
+              characterizes intangible hygiene.
+            </p>
+          </div>
+          <div class='flex flex-col'>
+            <img src={hel} />
+            <p>
+              With the X, not only the word „experience“ is to be clarified, but
+              also that each visit creates a new experience.
+            </p>
+          </div>
+          <div class='flex flex-col'>
+            <img src={hel} />
+            <p>As a rounded rectangle, it symbolizes the laboratory.</p>
+          </div>
         </div>
         <div class='flex flex-col'>
-          <h2>11</h2>
-          <p>Usability test</p>
+          <h3>Typography</h3>
+          <div class='flex flex-col'>
+            <img src={hel} />
+            <p>
+              The font of the logo should give a strong but friendly impression.
+              It was recommended to use the sans serif font „Biko“, because the
+              rounded soft letters and the straight-line geometry of these
+              letters convey this at the same time.
+            </p>
+          </div>
+          <div class='flex flex-col'>
+            <img src={hel} />
+            <p>
+              Poppins is a strong and straight-line sans serif typeface designed
+              to convey the overall brand image in written form on the website
+              or print products.
+            </p>
+          </div>
         </div>
-        <div class='flex flex-col'>
-          <h2>44</h2>
-          <p>Screens</p>
-        </div>
+      </div>
+
+      <div class='flex flex-col'>
+        <h2>Landing page</h2>
+        <p>
+          The Landingpage was created as OnePager for Mobile and Desktop. In
+          order to reduce the data volume of the users, the problem statement
+          video of the mobile pages was replaced with text. On the desktop page
+          this can be seen directly at the beginning.
+        </p>
+        <img src={hel} />
+        <img src={hel} />
       </div>
     </div>
   );

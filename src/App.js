@@ -11,7 +11,6 @@ import ScrollToTop from './components/ScrollToTop';
 import Smartdress from './pages/Smartdress';
 import Nazzle from './pages/Nazzle';
 import Storyline from './pages/Storyline';
-import Hel from './pages/Hel';
 import who from './pages/Who';
 
 import {
@@ -38,7 +37,6 @@ function App() {
           <Route exact path='/project/smartdress' component={Smartdress} />
           <Route exact path='/project/nazzle' component={Nazzle} />
           <Route exact path='/project/storyline' component={Storyline} />
-          <Route exact path='/project/hygienelab' component={Hel} />
 
           <Route exact path='/whoiam' component={who} />
         </Switch>
@@ -46,7 +44,6 @@ function App() {
           <Route exact path='/project/smartdress' />
           <Route exact path='/project/nazzle' />
           <Route exact path='/project/storyline' />
-          <Route exact path='/project/hygienelab' />
           <Route exact path='/whoiam' />
           <Route path='/'>
             <div class='spacing' />
