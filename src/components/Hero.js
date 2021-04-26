@@ -55,7 +55,7 @@ function Hero() {
               : 'hidden'
           }
         >
-          <p class='scroll-ani bounce pl-6'>Scroll 👇</p>
+          <p class='scroll-ani bounce'>Scroll 👇</p>
         </div>
       </section>
     </section>
