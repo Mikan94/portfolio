@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-image';
-import img from '../assets/aboutimg.jpg';
 
 function About() {
   const history = useHistory();

@@ -490,7 +490,7 @@ text {
 }
 
 .img-change {
-  content: url(./assets/aboutimg.jpg);
+  content: url(./assets/aboutimg.jpeg);
   transition: all 0.5s ease-in-out;
   border-radius: 5px;
 }
