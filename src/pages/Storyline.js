@@ -81,7 +81,7 @@ function Storyline() {
         </section>
       </div>
 
-      <div class='flex flex-col mt-16 lg:flex-row mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mt-48 lg:flex-row mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <div class='flex flex-col'>
           <div class='flex-col'>
             <h2 class='color-y'>Overview</h2>
@@ -96,36 +96,33 @@ function Storyline() {
         </div>
       </div>
 
-      <div class='flex flex-col sm:flex-row mx-8 mt-16 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <div class='flex flex-col'>
-          <div class='flex flex-col mt-8'>
-            <h5 class='text-white'>Project type</h5>
-            <p>Research project COURAGE 4er Team</p>
-          </div>
-          <div class='flex flex-col mt-8'>
-            <h5 class='text-white'>Time</h5>
-            <p>8 weeks (2019)</p>
-          </div>
-          <div class='flex flex-col mt-8'>
-            <h5 class='text-white'>Team</h5>
-            <p class='mr-32'>Team of 4 Human-machine-Interaction Students</p>
-          </div>
+      <div class='flex flex-col mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-8'>
+        <div class='flex flex-col mt-32'>
+          <h5 class='text-white'>Project type</h5>
+          <p class='mr-16'>Research project COURAGE 4er Team</p>
         </div>
-        <div class='flex flex-col'>
-          <div class='flex flex-col mt-8 '>
-            <h5 class='text-white'>MyRole</h5>
-            <p>UI Designer</p>
-          </div>
-          <div class='flex flex-col mt-8'>
-            <h5 class='text-white'>What I've done</h5>
-            <p>Concept</p>
-            <p>Game Design</p>
-            <p>Prototype</p>
-          </div>
+        <div class='flex flex-col mt-8'>
+          <h5 class='text-white'>Time</h5>
+          <p>8 weeks (2019)</p>
+        </div>
+        <div class='flex flex-col mt-8'>
+          <h5 class='text-white'>Team</h5>
+          <p class='mr-32'>Team of 4 Human-machine-Interaction Students</p>
+        </div>
+
+        <div class='flex flex-col mt-8 '>
+          <h5 class='text-white'>My Role</h5>
+          <p>UI Designer</p>
+        </div>
+        <div class='flex flex-col mt-8'>
+          <h5 class='text-white'>What I've done</h5>
+          <p>Concept</p>
+          <p>Game Design</p>
+          <p>Prototype</p>
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <h3 class='color-y'>
           How can we playfully sensitize students to fake news and cyber
           bullying?
@@ -160,7 +157,7 @@ function Storyline() {
               </text>
             </p>
           </div>
-          <div class='flex flex-col mt-8 '>
+          <div class='flex flex-col mt-48'>
             <h4>Solution</h4>
             <p>
               For this purpose, we developed a mobile application for students
@@ -193,7 +190,7 @@ function Storyline() {
         </Link>
       </div>
 
-      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <h2 class='color-y'>Challenges and how we mastered them</h2>
         <p>
           Before the project began, we received two challenges that guided the
@@ -218,7 +215,7 @@ function Storyline() {
         </p>
       </div>
 
-      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <h2 class='color-y'>UI Concept</h2>
         <p>
           My focus in this project was primarily on the visual design and the
@@ -227,7 +224,7 @@ function Storyline() {
           teachers to carry out the study in one lesson and not have to explain
           the application to the children in advance in a time-consuming way.
         </p>
-        <div class='flex flex-col mt-24'>
+        <div class='flex flex-col mt-48'>
           <h3>User Flow</h3>
           <p>
             The guidance through the application is linear up to the execution
@@ -236,7 +233,7 @@ function Storyline() {
           </p>
           <img class='mt-8' src={flow} />
         </div>
-        <div class='flex flex-col mt-24'>
+        <div class='flex flex-col mt-48'>
           <h3>Wireframes</h3>
           <p>
             Creating wireframes helps me translate the user flow into an
@@ -246,7 +243,7 @@ function Storyline() {
           <img class='mt-8' src={wire} />
         </div>
 
-        <div class='flex flex-col mt-24'>
+        <div class='flex flex-col mt-48'>
           <h3 class=''>Styleguide</h3>
           <p>
             The research project envisaged testing from year to year how
@@ -255,7 +252,7 @@ function Storyline() {
             planned to create a style guide for branding and uniform
             presentation of the application.{' '}
           </p>
-          <div class='flex flex-col mt-8'>
+          <div class='flex flex-col mt-48'>
             <h4>Name definition</h4>
             <p>
               The logo should first of all represent the S of „Story“ and L of
@@ -264,9 +261,9 @@ function Storyline() {
               „fade out“ at the end, this stands for the fact that the stories
               have an open end and are meant to inspire reflection.
             </p>
-            <img class='mt-8 w-64' src={logo} />
+            <img class='mt-8 w-48' src={logo} />
           </div>
-          <div class='flex flex-col mt-16'>
+          <div class='flex flex-col mt-48'>
             <h4>Colors</h4>
             <p>
               The color choice was limited to a bright yellow to strongly convey
@@ -292,7 +289,7 @@ function Storyline() {
             </div>
           </div>
 
-          <div class='flex flex-col mt-16'>
+          <div class='flex flex-col mt-48'>
             <h4>Font</h4>
             <p>
               The font of the logo should give a strong but playful impression.
@@ -312,7 +309,7 @@ function Storyline() {
           </div>
         </div>
 
-        <div id='solution' class='flex flex-col mt-48'>
+        <div id='solution' class='flex flex-col mt-96'>
           <h2 class='color-y'>Final product</h2>
           <div class='flex flex-col mt-4'>
             <h4>Login</h4>
@@ -324,7 +321,7 @@ function Storyline() {
             </p>
             <img class='mt-4' src={f1} />
           </div>
-          <div class='flex flex-col mt-24'>
+          <div class='flex flex-col mt-48'>
             <h4>System errors</h4>
             <p>
               Two hints are displayed during the logon process. The first is
@@ -335,7 +332,7 @@ function Storyline() {
             </p>
             <img class='mt-4' src={f2} />
           </div>
-          <div class='flex flex-col mt-24'>
+          <div class='flex flex-col mt-48'>
             <h4>Onboarding</h4>
             <p>
               Onboarding has only three explanations to the game. Below three
@@ -346,7 +343,7 @@ function Storyline() {
             </p>
             <img class='mt-4' src={f3} />
           </div>
-          <div class='flex flex-col mt-24'>
+          <div class='flex flex-col mt-48'>
             <h4>Overview game capitle</h4>
             <p>
               The overview of the chapters is represented in a map form with a
@@ -355,7 +352,7 @@ function Storyline() {
             </p>
             <img class='mt-4' src={f4} />
           </div>
-          <div class='flex flex-col mt-24'>
+          <div class='flex flex-col mt-48'>
             <h4>Inside story</h4>
             <p>
               The chapter is presented in video form and then summarized by
@@ -369,7 +366,6 @@ function Storyline() {
               width='600'
               height='300'
               controls='controls'
-              autoplay='true'
             />
           </div>
         </div>

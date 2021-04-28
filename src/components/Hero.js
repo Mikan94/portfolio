@@ -31,7 +31,7 @@ function Hero() {
         <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-80 2xl:mx-80 pt-36'>
           <h3 class='color-y'>Hello, I'm Anne</h3>
           <h2 class='color-y'>
-            and transform problems into digital sweet homes 🏠
+            and I transform problems into digital sweet homes 🏠
           </h2>
         </div>
 
