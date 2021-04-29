@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as LinkR } from 'react-router-dom';
 import { Link } from 'react-scroll';
-import down from '../assets/down.svg';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -47,7 +46,6 @@ function Navbar() {
             onClick={closeMobileMenu}
           >
             Anne Minkenberg
-            {/* <img src={down} className='transform -rotate-45 -mb-6 -ml-2' /> */}
           </Link>
         </LinkR>
 

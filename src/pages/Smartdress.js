@@ -54,7 +54,7 @@ function Smartdress() {
     <div>
       <div>
         <button
-          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out'
+          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out focus:outline-none'
           onClick={() => {
             history.push('/');
           }}
@@ -63,18 +63,15 @@ function Smartdress() {
         </button>
       </div>
 
-      <div class='hero-bg-sd flex flex-col py-32 md:px-16 lg:px-16'>
-        <div class='flex flex-col order-1 mx-8 mb-8 sm:mx-32 md:mx-48 lg:mx-72 xl:mx-96 2xl:pl-32 2xl:pt-16'>
+      <div class='hero-bg-sd flex flex-col py-16 px-16 md:px-32 lg:px-64 xl:px-96 justify-center items-center'>
+        <div class='flex flex-col'>
           <h2 class='text-4xl mb-2'>Smartdress</h2>
           <p class='text-md'>
             Your personal outfit advisor with whom you always know what to wear
             today
           </p>
         </div>
-        <img
-          src={smartdress}
-          class='order-2 px-8 my-16 sm:px-32 md:px-48 lg:px-64 xl:px-96 2xl:mx-32'
-        />
+        <img src={smartdress} class='w-96' />
         <section class='container mx-auto fixed bottom-8'>
           <p class={visible ? 'scroll-ani bounce text-center' : 'hidden'}>
             Scroll 👇
@@ -674,10 +671,6 @@ function Smartdress() {
           </div>
         </div>
       </div>
-      {/* <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>Conclusion</h2>
-        <p class='mt-4'>text und so</p>
-      </div> */}
     </div>
   );
 }

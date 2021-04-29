@@ -3,7 +3,6 @@ import CardItems from './CardItems';
 import nazzle from '../assets/nazzle.png';
 import smartdress from '../assets/smartdress.png';
 import storyline from '../assets/storyline.png';
-import hel from '../assets/hel.png';
 
 function Projects() {
   return (
@@ -30,15 +29,6 @@ function Projects() {
           link='/project/storyline'
         />
         <div class='card-spacing' />
-        {/* <CardItems
-          bg='bg-hel'
-          text='Hygiene Lab'
-          subtitle='Client work'
-          description='Creating a storytelling experience of visiting public restrooms with contactless products'
-          src={hel}
-          link='/project/hygienelab'
-        />
-        <div class='card-spacing' /> */}
         <CardItems
           bg='bg-nazzle'
           text='Nazzle'

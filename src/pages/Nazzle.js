@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './pages.css';
 import nazzle from '../assets/nazzle.png';
 import x from '../assets/x.svg';
-import s1 from '../assets/nazzle/1.png';
-import s2 from '../assets/nazzle/2.png';
-import s3 from '../assets/nazzle/3.png';
-import s4 from '../assets/nazzle/4.png';
 import color from '../assets/nazzle/color.png';
 import f1 from '../assets/nazzle/f1.png';
 import f2 from '../assets/nazzle/f2.png';
@@ -21,7 +17,8 @@ import typo from '../assets/nazzle/typo.png';
 import wire from '../assets/nazzle/wire.png';
 import preview from '../assets/nazzle/preview.png';
 
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 function Nazzle() {
   const history = useHistory();
@@ -55,7 +52,7 @@ function Nazzle() {
     <div>
       <div>
         <button
-          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out'
+          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out focus:outline-none'
           onClick={() => {
             history.push('/');
           }}
@@ -64,18 +61,15 @@ function Nazzle() {
         </button>
       </div>
 
-      <div class='hero-bg-n flex flex-col py-32 md:px-8 lg:px-16'>
-        <div class='flex flex-col order-1 mx-8 mb-8 sm:mx-32 md:mx-48 lg:mx-72 xl:mx-96 2xl:pl-32 2xl:pt-16'>
+      <div class='hero-bg-n flex flex-col py-16 px-16 md:px-32 lg:px-64 xl:px-96 justify-center items-center'>
+        <div class='flex flex-col'>
           <h2 class='text-4xl mb-2'>Nazzle</h2>
           <p class='text-md'>
             Playfully explore nature and solve exciting puzzles with augmented
             reality
           </p>
         </div>
-        <img
-          src={nazzle}
-          class='order-2 px-8 sm:px-32 md:px-48 lg:px-64 xl:px-96 2xl:mx-32'
-        />
+        <img src={nazzle} class='w-96' />
         <section class='container mx-auto fixed bottom-8'>
           <p class={visible ? 'scroll-ani bounce text-center' : 'hidden'}>
             Scroll 👇
@@ -368,10 +362,6 @@ function Nazzle() {
           </div>
         </div>
       </div>
-      {/* <div class='flex flex-col mt-48 mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>Conclusion</h2>
-        <p>TBD</p>
-      </div> */}
     </div>
   );
 }

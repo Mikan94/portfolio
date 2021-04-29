@@ -1,7 +1,7 @@
 import React from 'react';
 import x from '../assets/x.svg';
 
-import { Link, useHistory, ScrollRestoration } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function Who() {
   const history = useHistory();
@@ -168,7 +168,7 @@ function Who() {
             realize some ideas of mine
           </li>
           <li class='list-none mt-4 ml-8 mr-8'>
-            Like you have read before - I also inspired by the smart
+            Like you have read before - I'm also inspired by the smart
             architecture of tiny houses
           </li>
 
@@ -182,10 +182,6 @@ function Who() {
             I am so small that I can walk under a volleyball net without bending
             down
           </li>
-          {/* <li class='list-disc mt-8 ml-8 mr-8'>
-            Can play a bit soccer and table tennis and it's enough to beat some
-            guys
-          </li> */}
         </ul>
       </div>
     </section>
