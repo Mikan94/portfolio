@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link as LinkR } from 'react-router-dom';
 import { Link } from 'react-scroll';
+import data from '../content/navbar.json';
 
-function Navbar() {
+function Navbar(props) {
+  let content = data;
+  props.language === 'Deutsch'
+    ? (content = data.Deutsch)
+    : (content = data.English);
+
   const [click, setClick] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -74,7 +80,7 @@ function Navbar() {
               className='text-xl lg:text-lg link nav-link'
               onClick={closeMobileMenu}
             >
-              Digital 🏠
+              {content.nav1}
             </Link>
           </li>
           <li className='flex justify-between mx-8 my-8 md:my-4 md:ml-12 md:mr-12'>
@@ -87,7 +93,7 @@ function Navbar() {
               className='text-xl lg:text-lg link nav-link'
               onClick={closeMobileMenu}
             >
-              Who I am 👷🏼‍♀️
+              {content.nav2}
             </Link>
           </li>
           <li className='flex justify-between my-8 md:my-4'>
@@ -101,8 +107,18 @@ function Navbar() {
               className='text-xl lg:text-lg link nav-link '
               onClick={closeMobileMenu}
             >
-              Contact 💬
+              {content.nav3}
             </Link>
+          </li>
+          <li class='flex justify-between my-8 md:my-4 lg:ml-8'>
+            <select
+              class='bg-transparent focus:outline-none'
+              value={props.language}
+              onChange={(e) => props.handleSetLanguage(e.target.value)}
+            >
+              <option value='Deutsch'>🇩🇪</option>
+              <option value='English'>🇺🇸</option>
+            </select>
           </li>
         </ul>
       </div>

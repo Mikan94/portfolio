@@ -72,7 +72,7 @@ function Nazzle() {
         <img src={nazzle} class='w-96' />
         <section class='container mx-auto fixed bottom-8'>
           <p class={visible ? 'scroll-ani bounce text-center' : 'hidden'}>
-            Scroll 👇
+            Scroll
           </p>
         </section>
       </div>
@@ -95,7 +95,7 @@ function Nazzle() {
       </div>
 
       <div class='flex flex-col mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-8 '>
-        <div class='flex flex-col mt-32 '>
+        <div class='flex flex-col mt-16 '>
           <h5 class='text-white'>Project type</h5>
           <p class='mr-24'>
             Fictitious university project of the course Mobile Interaction
@@ -126,10 +126,10 @@ function Nazzle() {
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h3 class='color-y'>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+        <h2 class='color-y'>
           How might we get young people to spend more time in nature?
-        </h3>
+        </h2>
         <div class='flex flex-col'>
           <div class='flex flex-col mt-8'>
             <h4>Problem</h4>
@@ -140,7 +140,7 @@ function Nazzle() {
               of their game consoles.
             </p>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Solution</h4>
             <p>
               We developed a mobile application in which the users have to solve
@@ -172,7 +172,7 @@ function Nazzle() {
         </Link>
       </div>
 
-      <div class='flex flex-col mt-96 mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mt-48 mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <h2 class='color-y'>Research</h2>
         <div class='flex flex-col mt-8'>
           <h3>User research</h3>
@@ -185,7 +185,7 @@ function Nazzle() {
             reality.
           </p>
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h4>Persona</h4>
           <p>
             After the user reasearch and some interviews we created Leon our
@@ -198,7 +198,7 @@ function Nazzle() {
             <img src={persona} />
           </div>
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Market analysis</h3>
           <p>
             The market analysis shows that many applications make good use of
@@ -207,11 +207,11 @@ function Nazzle() {
             was therefore important to ensure that the virtual objects were
             significantly integrated into the game.
           </p>
-          <img class='mt-4 marktanalyse bild von smartdress' src={market} />
+          <img class='mt-4' src={market} />
         </div>
       </div>
 
-      <div class='flex flex-col mt-96 mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mt-48 mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <h2 class='color-y'>Creating a solution</h2>
         <div class='flex flex-col mt-4'>
           <h3>Concept</h3>
@@ -227,7 +227,7 @@ function Nazzle() {
             of thinking.
           </p>
 
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h3>Sketches</h3>
             <p>
               To quickly capture initial ideas regarding the concept of the
@@ -242,7 +242,7 @@ function Nazzle() {
             <img class='mt-4' src={sketches} />
           </div>
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>User Flow</h3>
           <p>
             In order to capture as many interaction points of the user as
@@ -251,7 +251,7 @@ function Nazzle() {
           </p>
           <img class='mt-8 sm:w-96' src={flow} />
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Wireframes</h3>
           <p>
             The wireframes also served as preliminary work for the final
@@ -260,7 +260,7 @@ function Nazzle() {
           </p>
           <img class='mt-8' src={wire} />
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Styleguide</h3>
           <div class='flex flex-col mt-4'>
             <h4>Name definition</h4>
@@ -272,7 +272,7 @@ function Nazzle() {
             </p>
             <img class='mt-8 w-96' src={name} />
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Choosing colors</h4>
             <p>
               Due to the fact that the application is primarily played by
@@ -280,7 +280,7 @@ function Nazzle() {
             </p>
             <img class='mt-8 sm:w-96' src={color} />
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>The right font</h4>
             <p>
               Renogare is an elegant geometric font that reflects the use of
@@ -291,7 +291,7 @@ function Nazzle() {
             <img class='mt-8 sm:w-96' src={typo} />
           </div>
         </div>
-        <div class='flex flex-col mt-96'>
+        <div class='flex flex-col mt-16'>
           <h2 id='solution' class='color-y'>
             Final product
           </h2>
@@ -307,7 +307,7 @@ function Nazzle() {
               <img class='mt-4' src={f1} />
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Onboarding</h4>
             <p>
               Here the player is shown hints that the game can only be played in
@@ -319,7 +319,7 @@ function Nazzle() {
               <img class='mt-4' src={f2} />
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Navigation</h4>
             <p>
               A navigation system is integrated into the game, which guides the
@@ -332,7 +332,7 @@ function Nazzle() {
               <img class='mt-4' src={f4} />
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Menu</h4>
             <p>
               As soon as the user has reached a safe terrain, all available
@@ -345,7 +345,7 @@ function Nazzle() {
               <img class='mt-4 pr-32 md:w-80' src={f5} />
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>In-Game</h4>
             <p>
               Basically, the puzzles are constructed in such a way that the

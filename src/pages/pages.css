@@ -92,7 +92,7 @@ p {
   width: 250px;
 }
 .btn-j::after {
-  content: '👇';
+  content: url(../assets/down.svg);
   font-size: 16px;
   position: absolute;
   left: 80%;

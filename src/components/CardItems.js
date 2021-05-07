@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 function CardItems(props) {
@@ -15,7 +14,7 @@ function CardItems(props) {
           ></img>
           <div className='flex flex-col justify-between order-2 lg:order-1 mb-12 sm:my-16 mx-8 sm:mx-16'>
             <div className=''>
-              <h2 className='z-30 absolute text-3xl'>{props.text}</h2>
+              <h2 className='z-30 absolute text-3xl'>{props.title}</h2>
               <h4 className='mt-10'>{props.subtitle}</h4>
               <p className='mt-4 mb-8'>{props.description}</p>
             </div>
@@ -23,7 +22,7 @@ function CardItems(props) {
             <div className=''>
               <div className='justify-center flex mt-2 lg:justify-start'>
                 <Link to={props.link} className=''>
-                  <button class='btn-4'>Know more</button>
+                  <button class='btn-4'>{props.btn}</button>
                 </Link>
               </div>
             </div>

@@ -1,19 +1,21 @@
 import React from 'react';
 import '../index.css';
+import data from '../content/contact.json';
 
-function Contact() {
+function Contact(props) {
+  let content = data;
+  props.language === 'Deutsch'
+    ? (content = data.Deutsch)
+    : (content = data.English);
+
   return (
     <section id='contact' className='container mx-auto'>
       <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 '>
-        Contact 💬
+        {content.title}
       </h1>
       <div className='flex flex-col text-center px-4 mx-8 sm:mx-16 mt-16 md:mt-24 lg:px-32'>
-        <h3 class=''>You like what you have seen?</h3>
-        <h3 class=''>Then let's talk and create digital homes together</h3>
-        <p class='mt-8'>
-          You also have the choice: Send me a mail per carrier pigeon or have a
-          chat with me on LinkedIn
-        </p>
+        <h3 class=''>{content.text1}</h3>
+        <h3 class=''>{content.text2}</h3>
 
         <div className='flex flex-col items-center md:justify-center md:flex-row mt-16'>
           <button
@@ -22,7 +24,7 @@ function Contact() {
               window.open('mailto:minkenberg-anne@web.de', '_blank')
             }
           >
-            Send carrier pigeon
+            {content.btnMail}
           </button>
           <button
             className='btn-2 md:ml-4 rounded shadow-md'
@@ -33,7 +35,7 @@ function Contact() {
               )
             }
           >
-            Have a chat
+            {content.btnChat}
           </button>
         </div>
       </div>

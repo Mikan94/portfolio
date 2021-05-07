@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import data from '../content/hero.json';
 
-function Hero() {
+function Hero(props) {
+  let content = data;
+  props.language === 'Deutsch'
+    ? (content = data.Deutsch)
+    : (content = data.English);
+
   const [scrollPos, setScrollPos] = useState(false);
   const [visible, setVisible] = useState(true);
 
@@ -29,22 +35,13 @@ function Hero() {
     <section id='hero' className='container mx-auto'>
       <div className='flex flex-col text-center'>
         <div class='mx-8 sm:mx-16 lg:mx-32 xl:mx-80 2xl:mx-80 pt-36'>
-          <h3 class='color-y'>Hello, I'm Anne</h3>
-          <h2 class='color-y'>
-            and I transform problems into digital sweet homes 🏠
-          </h2>
+          <h2 class='color-y'>{content.title1}</h2>
+          <h2 class='color-y'>{content.title2}</h2>
         </div>
 
         <div className='mx-8 mt-8 px-4 sm:mx-16 lg:mx-32 xl:mx-80 2xl:mx-80'>
-          <p>
-            As a solution seeker aka UX/UI Designer with a background in
-            business. Now I create digital products to people problems that give
-            their back time and a sense of "coming home".
-          </p>
-          <p className='mt-4'>
-            Secret weapons: I'm also a React.js Rookie and adventure cyclist.
-            🚴‍♀️💨
-          </p>
+          <p>{content.description1}</p>
+          <p className='mt-4'>{content.description2}</p>
         </div>
       </div>
       <section class='container fixed bottom-0 mx-auto'>
@@ -55,7 +52,7 @@ function Hero() {
               : 'hidden'
           }
         >
-          <p class='scroll-ani bounce'>Scroll 👇</p>
+          <p class='scroll-ani bounce'>Scroll</p>
         </div>
       </section>
     </section>

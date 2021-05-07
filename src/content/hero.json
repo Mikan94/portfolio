@@ -1,0 +1,14 @@
+{
+  "Deutsch": {
+    "title1": "Hi, ich bin Anne",
+    "title2": "und ich transformiere Probleme in ein digitales vertrautes Zuhause.",
+    "description1": "Als Lösungssucherin aka UX/UI Designer mit betriebswirtschaftlichem Hintergrund kreiere ich digitale Produkte für die Probleme der Menschen, die ihnen Zeit und ein Gefühl von 'nach Hause kommen' zurückgeben.",
+    "description2": "Geheime Waffen: Ich bin auch ein React.js-Rookie und Abenteuer-Radfahrer."
+  },
+  "English": {
+    "title1": "Hello, I'm Anne",
+    "title2": "and I transform problems in digital sweet homes.",
+    "description1": "As a solution seeker aka UX/UI Designer with a background in business I create digital products to people problems that give their back time and a sense of coming home.",
+    "description2": "Secret weapons: I'm also a React.js Rookie and adventure cyclist"
+  }
+}

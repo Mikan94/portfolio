@@ -43,7 +43,6 @@ function Who(props) {
           <li class='mt-8 ml-8 mr-8'>{content.thinking.text1}</li>
           <li class='mt-8 ml-8 mr-8'>{content.thinking.text2}</li>
           <li class='mt-8 ml-8 mr-8'>{content.thinking.text3}</li>
-          <li class='mt-8 ml-8 mr-8'>{content.thinking.text4}</li>
         </ul>
       </div>
 
@@ -99,7 +98,7 @@ function Who(props) {
           <li class='flex flex-col lg:flex-row mt-8 mx-8 sm:mx-8'>
             <li>Hochschule Ruhr West (2016 - 2021)</li>
             <text class='lg:pl-2'>// Bachelor of Science</text>
-            <text class='lg:pl-2'>{content.knowledge.subject}</text>
+            <text class='lg:pl-2'>// {content.knowledge.subject}</text>
           </li>
           <li class='flex flex-col lg:flex-row mt-8 mx-8 sm:mx-8'>
             <li>Gesamtschule (2011 - 2012)</li>

@@ -11,34 +11,48 @@ import ScrollToTop from './components/ScrollToTop';
 import Smartdress from './pages/Smartdress';
 import Nazzle from './pages/Nazzle';
 import Storyline from './pages/Storyline';
-import who from './pages/Who';
+import Who from './pages/Who';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useHistory,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
+  let languageStoredInLocalStorage = localStorage.getItem('language');
+  let [language, setLanguage] = useState(
+    languageStoredInLocalStorage ? languageStoredInLocalStorage : 'Deutsch'
+  );
+
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <Switch>
           <Route exact path='/'>
-            <Navbar />
-            <Hero />
+            <Navbar
+              language={language}
+              handleSetLanguage={(language) => {
+                setLanguage(language);
+                storeLanguageInLocalStorage(language);
+              }}
+            />
+            <Hero language={language} />
             <div class='spacing' />
-            <Projects />
+            <Projects language={language} />
           </Route>
         </Switch>
         <Switch>
-          <Route exact path='/project/smartdress' component={Smartdress} />
-          <Route exact path='/project/nazzle' component={Nazzle} />
-          <Route exact path='/project/storyline' component={Storyline} />
+          <Route exact path='/project/smartdress'>
+            <Smartdress language={language} />
+          </Route>
+          <Route exact path='/project/nazzle'>
+            <Nazzle language={language} />
+          </Route>
+          <Route exact path='/project/storyline'>
+            <Storyline language={language} />
+          </Route>
 
-          <Route exact path='/whoiam' component={who} />
+          <Route exact path='/whoiam'>
+            <Who language={language} />
+          </Route>
         </Switch>
         <Switch>
           <Route exact path='/project/smartdress' />
@@ -47,16 +61,19 @@ function App() {
           <Route exact path='/whoiam' />
           <Route path='/'>
             <div class='spacing' />
-            <About />
+            <About language={language} />
             <div class='spacing' />
-            <Contact />
+            <Contact language={language} />
             <Sidebar />
           </Route>
         </Switch>
-        <Footer />
+        <Footer language={language} />
       </Router>
     </>
   );
+}
+function storeLanguageInLocalStorage(language) {
+  localStorage.setItem('language', language);
 }
 
 export default App;

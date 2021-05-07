@@ -74,7 +74,7 @@ function Smartdress() {
         <img src={smartdress} class='w-96' />
         <section class='container mx-auto fixed bottom-8'>
           <p class={visible ? 'scroll-ani bounce text-center' : 'hidden'}>
-            Scroll 👇
+            Scroll
           </p>
         </section>
       </div>
@@ -100,11 +100,11 @@ function Smartdress() {
       </div>
 
       <div class='flex flex-col mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-8'>
-        <div class='flex flex-col mt-32'>
+        <div class='flex flex-col mt-16'>
           <h5 class='text-white'>Project type</h5>
           <p class=''>Bachelor Thesis</p>
         </div>
-        <div class='flex flex-col mt-8 sm:mt-24 lg:mt-8'>
+        <div class='flex flex-col mt-8'>
           <h5 class='text-white'>Time</h5>
           <p>10 weeks (2021)</p>
         </div>
@@ -117,16 +117,16 @@ function Smartdress() {
         </div>
         <div class='flex flex-col mt-8'>
           <h5 class='text-white'>Used methods</h5>
-          <p>Marktanalyse</p>
+          <p>Market analysis</p>
           <p>Interviews</p>
           <p>Personas</p>
-          <p>Conecept</p>
+          <p>Concept</p>
           <p>Prototype</p>
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h3 class='color-y'>What am I going to wear today? 🤔</h3>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+        <h2 class='color-y'>What am I going to wear today?</h2>
         <div class='flex flex-col'>
           <div class='flex flex-col mt-8'>
             <h4>Problem</h4>
@@ -138,7 +138,7 @@ function Smartdress() {
               eliminated?
             </p>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Solution</h4>
             <p>
               My goal was to find out how people proceed step-by-step in
@@ -166,7 +166,7 @@ function Smartdress() {
         </Link>
       </div>
 
-      <div class='flex flex-row mx-8 mt-48 justify-center'>
+      <div class='flex flex-row mx-8 mt-24 justify-center'>
         <div class='flex flex-col mx-8 content-center'>
           <div class='flex flex-col text-center'>
             <h2 class=''>10</h2>
@@ -189,8 +189,8 @@ function Smartdress() {
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>🚀 Who doesn't have the dilemma?</h2>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+        <h2 class='color-y'>Who doesn't have the dilemma?</h2>
         <div class='flex flex-col mt-8'>
           <p>
             It all started in 2017 in front of my closet, Where I asked myself,
@@ -216,8 +216,8 @@ function Smartdress() {
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>📚 And what is behind the dilemma?</h2>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+        <h2 class='color-y'>And what is behind the dilemma?</h2>
         <div class='flex flex-col'>
           <div class='flex flex-col mt-8'>
             <p>
@@ -236,7 +236,7 @@ function Smartdress() {
           </div>
         </div>
 
-        <div class='flex flex-col mt-32'>
+        <div class='flex flex-col mt-16'>
           <div class='flex flex-col'>
             <h4>Intension of the dressing</h4>
             <p class=''>
@@ -249,12 +249,12 @@ function Smartdress() {
             </p>
           </div>
 
-          <div class='flex flex-col mt-32 content-center'>
+          <div class='flex flex-col mt-16 content-center'>
             <h4>Possession clothing</h4>
             <p class=''>In the past - ca. 36 pieces</p>
             <p>Today - ca. 120 pieces</p>
           </div>
-          <div class='flex flex-col mt-32'>
+          <div class='flex flex-col mt-16'>
             <h4>Dressing problems</h4>
             <p class=''>
               These criteria make it difficult to answer the question. "What am
@@ -271,7 +271,7 @@ function Smartdress() {
 
         <div class='mt-64'>
           <div class='flex flex-col'>
-            <h3 class='color-y'>🔎 Market research</h3>
+            <h3 class='color-y'>Market research</h3>
             <p class=''>
               Next, I conducted market research to identify the need for a
               solution to the dressing problem and whether there are already
@@ -280,18 +280,18 @@ function Smartdress() {
               encounters the dressing dilemma.
             </p>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Market analysis</h4>
             <p>
               Increase in fashion consumption in the next 5 years according to
               Statista (2020) by 20%.
             </p>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Target group analysis</h4>
             <p>Female, 18 - 34 years (Facebook Audience, Greenpeace studies)</p>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>Competitor analysis</h4>
             <p>
               The competitor analysis showed that few companies deal with the
@@ -302,9 +302,9 @@ function Smartdress() {
           </div>
         </div>
 
-        <div class='mt-64'>
+        <div class='mt-32'>
           <div class='flex flex-col'>
-            <h3 class='color-y'>👩‍💻 User research</h3>
+            <h3 class='color-y'>User research</h3>
             <p class='text-sm mt-2 text-gray-300'>
               12 participants aged 18 - 34 years invited
             </p>
@@ -318,7 +318,7 @@ function Smartdress() {
               since the target group analysis had only little information.
             </p>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>User surveys</h4>
             <p class='text-sm mt-2 text-gray-300'>10 participants</p>
             <p class='mt-4'>
@@ -347,7 +347,7 @@ function Smartdress() {
               </div>
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4>User interviews</h4>
             <p class='text-sm text-gray-300 mt-2'>10 participants</p>
             <p class='mt-4'>
@@ -358,7 +358,7 @@ function Smartdress() {
               later implementation was necessary.{' '}
             </p>
             <div class='flex flex-col'>
-              <p class='mt-32 font-bold'>
+              <p class='mt-16 font-bold'>
                 "Why is it so hard for you to put together an outfit quickly?"
               </p>
               <li>
@@ -367,7 +367,7 @@ function Smartdress() {
               </li>
               <li>Therefore reaching for already worn outfits, routine</li>
             </div>
-            <div class='flex flex-col mt-32'>
+            <div class='flex flex-col mt-16'>
               <p class='font-bold'>
                 "What indicators do you attribute to a garment, and which are
                 relevant?"
@@ -378,7 +378,7 @@ function Smartdress() {
                 emotional state, availability
               </li>
             </div>
-            <div class='flex flex-col mt-32'>
+            <div class='flex flex-col mt-16'>
               <p class='font-bold'>
                 "Imagine you're standing in front of your closet right now. How
                 would you now proceed step by step to create the one outfit for
@@ -405,14 +405,14 @@ function Smartdress() {
                   top and then the pants
                 </li>
               </li>
-              <img class='mt-16 w-80' src={type} />
+              <img class='mt-8 w-80' src={type} />
             </div>
           </div>
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>✏️ Who and how is the product used?</h2>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+        <h2 class='color-y'>Who and how is the product used?</h2>
         <p class='mt-4'>
           The interviews gave me an insight into their dressing process, the
           abstract information was methodically simplified. For better
@@ -421,7 +421,7 @@ function Smartdress() {
           addition, I noted down user stories and user scenarios from the
           persona's point of view, which I then drew in storyboards.
         </p>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Persona</h3>
           <p>
             The information about the persona comes from the target group
@@ -435,14 +435,14 @@ function Smartdress() {
             </div>
           </div>
 
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h3>User stories</h3>
             <p>
               The user stories will now present the needs and wants of the
               persona Lea.
             </p>
             <div class='flex flex-row flex-wrap'>
-              <div class='btn-p mt-2 flex '>
+              <div class='btn-p mt-2 flex'>
                 As a user, I want to quickly display several random outfits
                 because I got up too late and don't have time to create one of
                 my own
@@ -473,7 +473,7 @@ function Smartdress() {
               </div>
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h3>Storyboards</h3>
             <p>
               In this context, the drawing of the storyboard served to give even
@@ -485,8 +485,8 @@ function Smartdress() {
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>👷🏼‍♀️ Creation of the Outfit Advisor</h2>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+        <h2 class='color-y'>Creation of the Outfit Advisor</h2>
         <p class='mt-4'>
           Building on the previous phases, I selected the most important
           requirements for the design solution from the user stories.{' '}
@@ -499,7 +499,7 @@ function Smartdress() {
           <li>View worn outfits</li>
           <li>Save outfits</li>
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>User flow</h3>
           <p class=''>
             Based on this, I created a user flow of the application to sketch
@@ -509,9 +509,9 @@ function Smartdress() {
             respondents see the outfit creation and the closet as separate
             areas.
           </p>
-          <img class='mt-16 sm:w-96' src={flow} />
+          <img class='mt-8 sm:w-96' src={flow} />
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Sketches</h3>
           <p class=''>
             The first ideas of the design solution were created by pen and
@@ -520,22 +520,22 @@ function Smartdress() {
           </p>
           <img class='mt-8' src={sketches} />
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Wireframes</h3>
           <p class=''>
             In the next step, I fleshed out some sketches into wireframes.
           </p>
           <img class='mt-8' src={wire} />
         </div>
-        <div id='solution' class='flex flex-col mt-48'>
-          <h3 class='color-y'>Prototyp</h3>
+        <div id='solution' class='flex flex-col mt-16'>
+          <h3 class='color-y'>Prototype</h3>
           <p class=''>
             Based on the user flow and wireframes, the first design solution for
             the dressing problem was created. The features listed here represent
             the core elements of the prototype and were subsequently subjected
             to a usability test.
           </p>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4 class='font-semibold'>Outfit proposal according to needs</h4>
             <p class=''>
               When users wanted to dress for a certain situation or wear
@@ -552,7 +552,7 @@ function Smartdress() {
               controls='controls'
             />
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4 class='font-semibold'>Random outfit recommendation</h4>
             <p class=''>
               The random outfit recommendation is intended to allow users to
@@ -568,7 +568,7 @@ function Smartdress() {
               controls='controls'
             />
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <h4 class='font-semibold'>Upload clothes</h4>
             <p class=''>
               The uploading of a garment was criticized most often in the user
@@ -592,7 +592,7 @@ function Smartdress() {
         </div>
       </div>
 
-      <div class='flex flex-col mx-8 mt-96 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
+      <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <h2 class='color-y'>Usability Test</h2>
         <p class=''>
           The first high-fidelity prototype was tested via remote usability test
@@ -608,9 +608,9 @@ function Smartdress() {
           The tasks were linked to eight questions regarding usability and user
           experience. The short version of the User Experience Questionnaire was
           used for this purpose. The entire test concluded with a short feedback
-          discussion (5 - 10min) with the testers.
+          discussion (5 - 10 min) with the testers.
         </p>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Results</h3>
           <p>
             After evaluating all the data and information from the maze program,
@@ -636,7 +636,7 @@ function Smartdress() {
                 color, season, occasion)
               </p>
             </div>
-            <div class='btn-p flex flex-col mt-2 w-screen '>
+            <div class='btn-p flex flex-col mt-2 w-screen'>
               <p class='color-g font-semibold'>Settings</p>
               <p class='color-g'>
                 Be able to set yourself when application will suggest worn
@@ -645,10 +645,10 @@ function Smartdress() {
             </div>
           </div>
         </div>
-        <div class='flex flex-col mt-48'>
+        <div class='flex flex-col mt-16'>
           <h3>Update</h3>
           <div class='flex flex-col'>
-            <p class='font-semibold mt-4 '>Setting laundry interval</p>
+            <p class='font-semibold mt-4'>Setting laundry interval</p>
             <p>
               Users can now set the reconsideration via the navigation item
               "Outfit". The interviews showed that the users saw this item
@@ -658,7 +658,7 @@ function Smartdress() {
               <img class='mt-8' src={u1} />
             </div>
           </div>
-          <div class='flex flex-col mt-48'>
+          <div class='flex flex-col mt-16'>
             <p class='font-semibold'>Adding more attributs for clothes</p>
             <p>
               The form was extended, since some test persons had difficulty
