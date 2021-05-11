@@ -14,6 +14,7 @@ import Storyline from './pages/Storyline';
 import Who from './pages/Who';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   let languageStoredInLocalStorage = localStorage.getItem('language');
@@ -39,21 +40,23 @@ function App() {
             <Projects language={language} />
           </Route>
         </Switch>
-        <Switch>
-          <Route exact path='/project/smartdress'>
-            <Smartdress language={language} />
-          </Route>
-          <Route exact path='/project/nazzle'>
-            <Nazzle language={language} />
-          </Route>
-          <Route exact path='/project/storyline'>
-            <Storyline language={language} />
-          </Route>
+        <AnimatePresence initial={false} exitBeforeEnter>
+          <Switch>
+            <Route exact path='/project/smartdress'>
+              <Smartdress language={language} />
+            </Route>
+            <Route exact path='/project/nazzle'>
+              <Nazzle language={language} />
+            </Route>
+            <Route exact path='/project/storyline'>
+              <Storyline language={language} />
+            </Route>
 
-          <Route exact path='/whoiam'>
-            <Who language={language} />
-          </Route>
-        </Switch>
+            <Route exact path='/whoiam'>
+              <Who language={language} />
+            </Route>
+          </Switch>
+        </AnimatePresence>
         <Switch>
           <Route exact path='/project/smartdress' />
           <Route exact path='/project/nazzle' />

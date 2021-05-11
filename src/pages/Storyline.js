@@ -17,11 +17,16 @@ import story from '../assets/storyline/Story.mp4';
 import typo1 from '../assets/storyline/typo1.png';
 import typo2 from '../assets/storyline/typo2.png';
 import wire from '../assets/storyline/wire.png';
+import data from '../content/storyline.json';
 
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
-function Storyline() {
+function Storyline(props) {
+  let content = data;
+  props.language === 'Deutsch'
+    ? (content = data.Deutsch)
+    : (content = data.English);
   const history = useHistory();
 
   const [scrollPos, setScrollPos] = useState(false);
@@ -65,10 +70,7 @@ function Storyline() {
       <div class='hero-bg-sl flex flex-col py-16 px-16 md:px-32 lg:px-64 xl:px-96 justify-center items-center'>
         <div class='flex flex-col'>
           <h2 class='text-4xl mb-2'>Storyline</h2>
-          <p class='text-md'>
-            Companion for students for the playful prevention of fake news and
-            cyber bullying in social networks
-          </p>
+          <p class='text-md'>{content.hero}</p>
         </div>
         <img src={storyline} class='w-96' />
         <section class='container mx-auto fixed bottom-8'>
@@ -81,63 +83,52 @@ function Storyline() {
       <div class='flex flex-col mt-16 lg:flex-row mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <div class='flex flex-col'>
           <div class='flex-col'>
-            <h2 class='color-y'>Overview</h2>
-            <p>
-              Storyline is an application to be used specifically in schools to
-              sensitize students to toxic content distributed via the Internet.
-              For this a playful concept was used, which is based on principle
-              of storytelling and involves the students interactively in the
-              stories.
-            </p>
+            <h2 class='color-y'>{content.overview.title}</h2>
+            <p>{content.overview.text}</p>
           </div>
         </div>
       </div>
 
       <div class='flex flex-col mx-8 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-8'>
-        <div class='flex flex-col mt-16'>
-          <h5 class='text-white'>Project type</h5>
-          <p class='mr-16'>Research project COURAGE 4er Team</p>
-        </div>
-        <div class='flex flex-col mt-8'>
-          <h5 class='text-white'>Time</h5>
-          <p>8 weeks (2019)</p>
-        </div>
-        <div class='flex flex-col mt-8'>
-          <h5 class='text-white'>Team</h5>
-          <p class='mr-32'>Team of 4 Human-machine-Interaction Students</p>
+        <div class='flex flex-col md:flex-row'>
+          <div class='flex flex-col mt-16 flex-1'>
+            <h5 class='text-white'>{content.overview.title2}</h5>
+            <p class='mr-16'>{content.overview.text2}</p>
+          </div>
+          <div class='flex flex-col mt-8 md:mt-16 flex-1'>
+            <h5 class='text-white'>{content.overview.title3}</h5>
+            <p>{content.overview.text3}</p>
+          </div>
         </div>
 
-        <div class='flex flex-col mt-8 '>
-          <h5 class='text-white'>My Role</h5>
-          <p>UI Designer</p>
+        <div class='flex flex-col md:flex-row'>
+          <div class='flex flex-col mt-8 flex-1'>
+            <h5 class='text-white'>Team</h5>
+            <p class='mr-32'>{content.overview.text4}</p>
+          </div>
+
+          <div class='flex flex-col mt-8 flex-1'>
+            <h5 class='text-white'>{content.overview.title4}</h5>
+            <p>UI Designer</p>
+          </div>
         </div>
-        <div class='flex flex-col mt-8'>
-          <h5 class='text-white'>What I've done</h5>
-          <p>Concept</p>
+        <div class='flex flex-col mt-8 flex-1'>
+          <h5 class='text-white'>{content.overview.title5}</h5>
+          <p>{content.overview.text5}</p>
           <p>Game design</p>
-          <p>Prototype</p>
+          <p>{content.overview.text51}</p>
         </div>
       </div>
 
       <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>
-          How can we playfully sensitize students to fake news and cyber
-          bullying?
-        </h2>
+        <h2 class='color-y'>{content.overview.q}</h2>
         <div class='flex flex-col'>
           <div class='flex flex-col mt-8'>
             <h4>Problem</h4>
             <p>
-              Nowadays, children grow up with social networks as if it were
-              their daily bread. Social networks have positive and negative
-              aspects. More and more, however, the negative points are
-              mentioned. Children find it difficult to distinguish between
-              posted information and whether it is true or false. Other
-              children, in turn, experience a new form of bullying, namely cyber
-              bullying.
+              {content.overview.qt1}
               <text>
-                The sponsored research project COURAGE wants to investigate
-                these issues more intensively.
+                {content.overview.t1}
                 <text class='px-2'>
                   <span
                     class=' link-ex'
@@ -148,24 +139,13 @@ function Storyline() {
                     COURAGE
                   </span>
                 </text>
-                wants to explore a solution for making children aware of the
-                dangers in social networks in the best possible and long-lasting
-                way.
+                {content.overview.t2}
               </text>
             </p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>Solution</h4>
-            <p>
-              For this purpose, we developed a mobile application for students
-              that would serve as a companion for them. The companion
-              specializes in introducing students to the dangers of social
-              networks in a playful and interactive way. To do this, awareness
-              is raised through interactive storytelling, in which individual
-              stories are told and the student can influence the further course
-              of the story. The active telling of the story and influencing of
-              it by the student brings about an active form of learning.
-            </p>
+            <h4>{content.overview.t3}</h4>
+            <p>{content.overview.t4}</p>
           </div>
         </div>
       </div>
@@ -183,179 +163,90 @@ function Storyline() {
           exact={true}
           offset={-50}
         >
-          <div class='btn-j text-center mt-8'>Jump to solution</div>
+          <div class='btn-j text-center mt-8'>{content.overview.btn}</div>
         </Link>
       </div>
 
       <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>Challenges and how we mastered them</h2>
-        <p>
-          Before the project began, we received two challenges that guided the
-          development of the Companion. The project required that students
-          participate in the COURAGE study once a school year using the
-          application/Companion. Therefore, we were given the requirement that
-          the application must be anonymous. Furthermore, the students were
-          supposed to compose their own code with characters/ symbols, which
-          should be entered by them when using the application again. The code
-          was used in the study to collect data on a student across school
-          years, but not to know which student it was. Since the application was
-          to be used across school years, it was important to design it in a way
-          that was equally visually appealing to 5th and 10th grade students.
-        </p>
-        <p>
-          Regarding the registration, we decided that each class received its
-          own symbols. Due to the unique symbols that only one class received,
-          the anonymous tracing of the study results could be guaranteed.
-          Regarding the neutral design of the application, a style guide was
-          specially created to ensure the recognition value of the
-          application/study.
-        </p>
+        <h2 class='color-y'>{content.overview.t5}</h2>
+        <p>{content.overview.t6}</p>
+        <p>{content.overview.t7}</p>
       </div>
 
       <div class='flex flex-col mx-8 mt-48 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
-        <h2 class='color-y'>UI Concept</h2>
-        <p>
-          My focus in this project was primarily on the visual design and the
-          creation of an application concept. It was important to me that the
-          application is logical and intuitive to use. This should enable the
-          teachers to carry out the study in one lesson and not have to explain
-          the application to the children in advance in a time-consuming way.
-        </p>
+        <h2 class='color-y'>{content.ui.title}</h2>
+        <p>{content.ui.t1}</p>
         <div class='flex flex-col mt-16'>
-          <h3>User Flow</h3>
-          <p>
-            The guidance through the application is linear up to the execution
-            of the chapters. The user is guided through each process in an
-            explanatory manner.
-          </p>
+          <h3>{content.ui.title2}</h3>
+          <p>{content.ui.text2}</p>
           <img class='mt-8' src={flow} />
         </div>
         <div class='flex flex-col mt-16'>
           <h3>Wireframes</h3>
-          <p>
-            Creating wireframes helps me translate the user flow into an
-            interaction concept and include initial visual aspects. The creation
-            was based on the main points of the user flow.
-          </p>
+          <p>{content.ui.text3}</p>
           <img class='mt-8' src={wire} />
         </div>
 
         <div class='flex flex-col mt-16'>
           <h3 class=''>Styleguide</h3>
-          <p>
-            The research project envisaged testing from year to year how
-            students deal with toxic issues in the meantime. Therefore, the
-            application should have a recognition value. For this reason, we
-            planned to create a style guide for branding and uniform
-            presentation of the application.{' '}
-          </p>
+          <p>{content.ui.text4}</p>
           <div class='flex flex-col mt-16'>
-            <h4>Name definition</h4>
-            <p>
-              The logo should first of all represent the S of „Story“ and L of
-              „Line“. The dots on the lines should show the different storylines
-              in the story where the user can influence them. The L has a slight
-              „fade out“ at the end, this stands for the fact that the stories
-              have an open end and are meant to inspire reflection.
-            </p>
+            <h4>{content.ui.title5}</h4>
+            <p>{content.ui.text5}</p>
             <img class='mt-8 w-48' src={logo} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>Colors</h4>
-            <p>
-              The color choice was limited to a bright yellow to strongly convey
-              the theme of "toxic content". The other colors, such as gray and
-              gray-blue, were to remain in the background and represent more
-              technical elements of the application.{' '}
-            </p>
+            <h4>{content.ui.title6}</h4>
+            <p>{content.ui.text6}</p>
 
             <div class='flex flex-col'>
               <img class='mt-8 w-36' src={cy} />
-              <p>Color for active CTA Feedback for interaction</p>
+              <p>{content.ui.subt61}</p>
             </div>
             <div class='flex flex-col'>
               <img class='mt-8 w-36 ' src={cb} />
-              <p>Color for inactive CTA</p>
+              <p>{content.ui.subt62}</p>
             </div>
             <div class='flex flex-col'>
               <img class='mt-8 w-36' src={cg} />
-              <p>
-                Color for interaction possibility that should not necessarily be
-                perceived e.g. „Skip“ - Onboarding
-              </p>
+              <p>{content.ui.subt63}</p>
             </div>
           </div>
 
           <div class='flex flex-col mt-16'>
-            <h4>Font</h4>
-            <p>
-              The font of the logo should give a strong but playful impression.
-              The sans serif font „A Pompadour Bold Sample“ was recommended as
-              the rounded soft letters and the straight-line geometry of the
-              letters convey this.
-            </p>
+            <h4>{content.ui.title7}</h4>
+            <p>{content.ui.text71}</p>
             <img class='mt-4 lg:pr-96' src={typo1} />
-            <p class='mt-16'>
-              The font „Verlag“ is a font that brings with it an unmistakable
-              personality and objectivity. This is exactly what the application
-              for the students is supposed to be. On the one hand personal/
-              familiar and on the other lens, because nothing in the application
-              should influence the student to a decision.
-            </p>
+            <p class='mt-16'>{content.ui.text72}</p>
             <img class='mt-4 lg:pr-96' src={typo2} />
           </div>
         </div>
 
         <div id='solution' class='flex flex-col mt-48'>
-          <h2 class='color-y'>Final product</h2>
+          <h2 class='color-y'>{content.product.head}</h2>
           <div class='flex flex-col mt-4'>
             <h4>Login</h4>
-            <p>
-              The registration process has been reduced to a minimum so that the
-              student does not have to provide any personal information. Only
-              his avatar can be chosen. Tracing back to the student is therefore
-              not possible.
-            </p>
+            <p>{content.product.text}</p>
             <img class='mt-4' src={f1} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>System errors</h4>
-            <p>
-              Two hints are displayed during the logon process. The first is
-              when the avatar is selected, as it must be reused in later tests
-              if the student is to remember it. The other notification is when a
-              Student wishes to start the game early if he or she has not
-              submitted all the information.
-            </p>
+            <h4>{content.product.title2}</h4>
+            <p>{content.product.text2}</p>
             <img class='mt-4' src={f2} />
           </div>
           <div class='flex flex-col mt-16'>
             <h4>Onboarding</h4>
-            <p>
-              Onboarding has only three explanations to the game. Below three
-              points are displayed, giving the user an overview of the process.
-              The user also has the option to leave the process prematurely via
-              „Skip“. However, this has been positioned in such a way that it is
-              not a faster-action option.
-            </p>
+            <p>{content.product.text3}</p>
             <img class='mt-4' src={f3} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>Overview game capitle</h4>
-            <p>
-              The overview of the chapters is represented in a map form with a
-              teaser text. A click opens the map and gives a deeper insight into
-              the chapter.
-            </p>
+            <h4>{content.product.title4}</h4>
+            <p>{content.product.text4}</p>
             <img class='mt-4' src={f4} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>Inside story</h4>
-            <p>
-              The chapter is presented in video form and then summarized by
-              text. The user then has three choices or can influence the events
-              of the chapter with his selection.
-            </p>
+            <h4>{content.product.title5}</h4>
+            <p>{content.product.text5}</p>
             <img class='mt-4' src={f5} />
             <video
               class='rounded-md mt-8 w-screen'
