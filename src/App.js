@@ -26,21 +26,23 @@ function App() {
     <>
       <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
-        <Switch>
-          <Route exact path='/'>
-            <Navbar
-              language={language}
-              handleSetLanguage={(language) => {
-                setLanguage(language);
-                storeLanguageInLocalStorage(language);
-              }}
-            />
-            <Hero language={language} />
-            <div class='spacing' />
-            <Projects language={language} />
-          </Route>
-        </Switch>
-        <AnimatePresence initial={false} exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+            <Route exact path='/'>
+              <Navbar
+                language={language}
+                handleSetLanguage={(language) => {
+                  setLanguage(language);
+                  storeLanguageInLocalStorage(language);
+                }}
+              />
+              <Hero language={language} />
+              <div class='spacing' />
+              <Projects language={language} />
+            </Route>
+          </Switch>
+        </AnimatePresence>
+        <AnimatePresence exitBeforeEnter>
           <Switch>
             <Route exact path='/project/smartdress'>
               <Smartdress language={language} />
@@ -57,19 +59,21 @@ function App() {
             </Route>
           </Switch>
         </AnimatePresence>
-        <Switch>
-          <Route exact path='/project/smartdress' />
-          <Route exact path='/project/nazzle' />
-          <Route exact path='/project/storyline' />
-          <Route exact path='/whoiam' />
-          <Route path='/'>
-            <div class='spacing' />
-            <About language={language} />
-            <div class='spacing' />
-            <Contact language={language} />
-            <Sidebar />
-          </Route>
-        </Switch>
+        <AnimatePresence>
+          <Switch>
+            <Route exact path='/project/smartdress' />
+            <Route exact path='/project/nazzle' />
+            <Route exact path='/project/storyline' />
+            <Route exact path='/whoiam' />
+            <Route path='/'>
+              <div class='spacing' />
+              <About language={language} />
+              <div class='spacing' />
+              <Contact language={language} />
+              <Sidebar />
+            </Route>
+          </Switch>
+        </AnimatePresence>
         <Footer language={language} />
       </Router>
     </>

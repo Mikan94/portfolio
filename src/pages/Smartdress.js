@@ -22,6 +22,12 @@ import f3 from '../assets/smartdress/f2.mov';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import data from '../content/smartDress.json';
+import {
+  motion,
+  useViewportScroll,
+  useSpring,
+  useTransform,
+} from 'framer-motion';
 
 function Smartdress(props) {
   let content = data;
@@ -30,6 +36,25 @@ function Smartdress(props) {
     : (content = data.English);
   const history = useHistory();
 
+  const transition = { duration: 0.5, ease: [0.6, 0.01, -0.05, 0.9] };
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+
+  const [canScroll, setCanScroll] = useState(false);
+
+  useEffect(() => {
+    if (canScroll === false) {
+      document.querySelector('body').classList.add('no-scroll');
+    } else {
+      document.querySelector('body').classList.remove('no-scroll');
+    }
+  }, [canScroll]);
+
+  const [isComplete, setIsComplete] = useState(false);
+  const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+  const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
+
+  useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
   const [scrollPos, setScrollPos] = useState(false);
   const [visible, setVisible] = useState(true);
 
@@ -56,30 +81,128 @@ function Smartdress(props) {
   );
 
   return (
-    <div>
-      <div>
+    <motion.div
+      onAnimationComplete={() => setCanScroll(true)}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+    >
+      <div class=''>
         <button
-          class='btn fixed z-40 top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out focus:outline-none'
+          class='btn fixed top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out focus:outline-none'
           onClick={() => {
             history.push('/');
           }}
         >
           <img src={x} />
         </button>
+        <div class='fixed bottom-4 right-2 sm:bottom-8 sm:right-4 '>
+          <motion.p
+            animate={{
+              transition: { delay: 1.2, ...transition },
+            }}
+            class={isComplete ? 'flex justify-center mr-3' : 'hidden'}
+          >
+            Top
+          </motion.p>
+          <Link
+            to='top'
+            smooth={true}
+            duration={1000}
+            spy={true}
+            exact={true}
+            offset={-50}
+          >
+            <svg className='circle cursor-pointer' viewBox='0 0 60 60'>
+              <motion.path
+                fill='none'
+                strokeWidth='3'
+                stroke='white'
+                strokeDasharray='0 1'
+                d='M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0'
+                style={{
+                  pathLength,
+                  rotate: 90,
+                  translateX: 5,
+                  translateY: 5,
+                  scaleX: -1, // Reverse direction of line animation
+                }}
+              />
+              <motion.path
+                class=''
+                fill='none'
+                strokeWidth='3'
+                stroke='white'
+                d='M17,28 L 25,20 L33,28'
+                initial={false}
+                strokeDasharray='0 1'
+                animate={{ pathLength: isComplete ? 1 : 0 }}
+              ></motion.path>
+            </svg>
+          </Link>
+        </div>
       </div>
 
-      <div class='hero-bg-sd flex flex-col py-16 px-16 md:px-32 lg:px-64 xl:px-96 justify-center items-center'>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.3, ...transition },
+        }}
+        id='top'
+        class='hero-bg-sd flex flex-col py-16 px-16 md:px-32 lg:px-64 xl:px-96 justify-center items-center'
+      >
         <div class='flex flex-col'>
-          <h2 class='text-4xl mb-2'>Smartdress</h2>
-          <p class='text-md'>{content.hero}</p>
+          <motion.h2
+            initial={{
+              opacity: 0,
+              scale: 0.9,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              transition: { delay: 0.5, ...transition },
+            }}
+            class='text-4xl mb-2'
+          >
+            Smartdress
+          </motion.h2>
+          <motion.p
+            initial={{
+              opacity: 0,
+              scale: 0.9,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              transition: { delay: 0.5, ...transition },
+            }}
+            class='text-md'
+          >
+            {content.hero}
+          </motion.p>
         </div>
-        <img src={smartdress} class='w-96' />
+        <motion.img
+          initial={{
+            opacity: 0,
+            scale: 0.9,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            transition: { delay: 0.5, ...transition },
+          }}
+          src={smartdress}
+          class='w-96'
+        />
         <section class='container mx-auto fixed bottom-8'>
           <p class={visible ? 'scroll-ani bounce text-center' : 'hidden'}>
             Scroll
           </p>
         </section>
-      </div>
+      </motion.div>
 
       <div class='flex flex-col mx-8 my-16 sm:mx-16 md:mx-24 lg:mx-40 xl:mx-72 2xl:mx-96'>
         <img src={hero} class='order-1 w-80 self-center' />
@@ -100,7 +223,7 @@ function Smartdress(props) {
             <h5 class='text-white'>{content.overview.title2}</h5>
             <p class=''>Bachelor Thesis</p>
           </div>
-          <div class='flex flex-col mt-8 flex-1'>
+          <div class='flex flex-col mt-8 flex-1 md:mt-16'>
             <h5 class='text-white'>{content.overview.title3}</h5>
             <p>{content.overview.d3}</p>
           </div>
@@ -458,7 +581,7 @@ function Smartdress(props) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
