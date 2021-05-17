@@ -10,14 +10,14 @@ function Contact(props) {
 
   return (
     <section id='contact' className='container mx-auto'>
-      <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 '>
+      <h1 className='text-center mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 '>
         {content.title}
       </h1>
-      <div className='flex flex-col text-center px-4 mx-8 sm:mx-16 mt-16 md:mt-24 lg:px-32'>
-        <h3 class=''>{content.text1}</h3>
-        <h3 class=''>{content.text2}</h3>
+      <div className='flex flex-col text-center px-4 mx-8 sm:mx-16 mt-8 lg:px-32'>
+        <h4 class=''>{content.text1}</h4>
+        <h4 class=''>{content.text2}</h4>
 
-        <div className='flex flex-col items-center md:justify-center md:flex-row mt-16'>
+        <div className='flex flex-col items-center md:justify-center md:flex-row mt-8'>
           <button
             className='btn-3 mb-4 md:mb-0 md:mr-4 rounded shadow-md'
             onClick={() =>

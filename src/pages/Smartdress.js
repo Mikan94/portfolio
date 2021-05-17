@@ -252,11 +252,11 @@ function Smartdress(props) {
         <h2 class='color-y'>{content.overview.question}</h2>
         <div class='flex flex-col'>
           <div class='flex flex-col mt-8'>
-            <h4>Problem</h4>
+            <h4 class='font-semibold'>Problem</h4>
             <p>{content.overview.d6}</p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.overview.t7}</h4>
+            <h4 class='font-semibold'>{content.overview.t7}</h4>
             <p>{content.overview.d7}</p>
           </div>
         </div>
@@ -331,18 +331,18 @@ function Smartdress(props) {
 
         <div class='flex flex-col mt-16'>
           <div class='flex flex-col'>
-            <h4>{content.dilemma2.title2}</h4>
+            <h4 class='font-semibold'>{content.dilemma2.title2}</h4>
             <p class=''>{content.dilemma2.text21}</p>
             <p class=''>{content.dilemma2.text22}</p>
           </div>
 
           <div class='flex flex-col mt-16 content-center'>
-            <h4>{content.dilemma2.title3}</h4>
+            <h4 class='font-semibold'>{content.dilemma2.title3}</h4>
             <p class=''>{content.dilemma2.text31}</p>
             <p>{content.dilemma2.text32}</p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.dilemma2.title4}</h4>
+            <h4 class='font-semibold'>{content.dilemma2.title4}</h4>
             <p class=''>{content.dilemma2.text41}</p>
             <li>{content.dilemma2.li41}</li>
             <li>{content.dilemma2.li42}</li>
@@ -353,19 +353,19 @@ function Smartdress(props) {
 
         <div class='mt-64'>
           <div class='flex flex-col'>
-            <h3 class='color-y'>{content.market.title}</h3>
+            <h3 class='color-y font-semibold'>{content.market.title}</h3>
             <p class=''>{content.market.text}</p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.market.title2}</h4>
+            <h4 class='font-semibold'>{content.market.title2}</h4>
             <p>{content.market.text2}</p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.market.title3}</h4>
+            <h4 class='font-semibold'>{content.market.title3}</h4>
             <p>{content.market.text3}</p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.market.title4}</h4>
+            <h4 class='font-semibold'>{content.market.title4}</h4>
             <p>{content.market.text4}</p>
             <img class='mt-16' src={market} />
           </div>
@@ -373,12 +373,12 @@ function Smartdress(props) {
 
         <div class='mt-32'>
           <div class='flex flex-col'>
-            <h3 class='color-y'>{content.user.title}</h3>
+            <h3 class='color-y font-semibold'>{content.user.title}</h3>
             <p class='text-sm mt-2 text-gray-300'>{content.user.subtitle}</p>
             <p class='mt-4'>{content.user.text}</p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.user.title2}</h4>
+            <h4 class='font-semibold'>{content.user.title2}</h4>
             <p class='text-sm mt-2 text-gray-300'>{content.user.subtitle2}</p>
             <p class='mt-4'>{content.user.text2}</p>
             <div class='list-none flex flex-col sm:flex-row flex-wrap mt-12'>
@@ -401,7 +401,7 @@ function Smartdress(props) {
             </div>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.user.title7}</h4>
+            <h4 class='font-semibold'>{content.user.title7}</h4>
             <p class='text-sm text-gray-300 mt-2'>{content.user.subtitle7}</p>
             <p class='mt-4'>{content.user.text7}</p>
             <div class='flex flex-col'>
@@ -433,7 +433,7 @@ function Smartdress(props) {
         <h2 class='color-y'>{content.usage.title}</h2>
         <p class='mt-4'>{content.usage.text}</p>
         <div class='flex flex-col mt-16'>
-          <h3>Persona</h3>
+          <h3 class='font-semibold'>Persona</h3>
           <p>{content.usage.text2}</p>
           <div class='flex flex-col'>
             <div class='flex flex-col'>
@@ -442,7 +442,7 @@ function Smartdress(props) {
           </div>
 
           <div class='flex flex-col mt-16'>
-            <h3>{content.usage.title3}</h3>
+            <h3 class='font-semibold'>{content.usage.title3}</h3>
             <p>{content.usage.b1}</p>
             <div class='flex flex-row flex-wrap'>
               <div class='btn-p mt-2 flex'>{content.usage.b2}</div>
@@ -454,7 +454,7 @@ function Smartdress(props) {
             </div>
           </div>
           <div class='flex flex-col mt-16'>
-            <h3>Storyboards</h3>
+            <h3 class='font-semibold'>Storyboards</h3>
             <p>{content.usage.text4}</p>
             <img class='mt-8' src={storyboard} />
           </div>
@@ -473,22 +473,22 @@ function Smartdress(props) {
           <li>{content.creation.li6}</li>
         </div>
         <div class='flex flex-col mt-16'>
-          <h3>User flow</h3>
+          <h3 class='font-semibold'>User flow</h3>
           <p class=''>{content.creation.text2}</p>
           <img class='mt-8 sm:w-96' src={flow} />
         </div>
         <div class='flex flex-col mt-16'>
-          <h3>Sketches</h3>
+          <h3 class='font-semibold'>Sketches</h3>
           <p class=''>{content.creation.text3}</p>
           <img class='mt-8' src={sketches} />
         </div>
         <div class='flex flex-col mt-16'>
-          <h3>Wireframes</h3>
+          <h3 class='font-semibold'>Wireframes</h3>
           <p class=''>{content.creation.text4}</p>
           <img class='mt-8' src={wire} />
         </div>
         <div id='solution' class='flex flex-col mt-16'>
-          <h3 class='color-y'>{content.creation.title5}</h3>
+          <h3 class='color-y font-semibold'>{content.creation.title5}</h3>
           <p class=''>{content.creation.text5}</p>
           <div class='flex flex-col mt-16'>
             <h4 class='font-semibold'>{content.creation.title6}</h4>
@@ -540,7 +540,7 @@ function Smartdress(props) {
         </div>
         <p class='mt-4'>{content.test.text2}</p>
         <div class='flex flex-col mt-16'>
-          <h3>{content.test.title3}</h3>
+          <h3 class='font-semibold'>{content.test.title3}</h3>
           <p>{content.test.text3}</p>
           <div class='flex flex-col md:flex-row flex-wrap'>
             <div class='btn-p flex flex-col mt-4 sm:min-w-max'>
@@ -551,7 +551,7 @@ function Smartdress(props) {
               <p class='color-g font-semibold'>Design</p>
               <p class='color-g'>{content.test.b22}</p>
             </div>
-            <div class='btn-p flex flex-col mt-2 lg:ml-2 lg:mt-4 2xl:mt-4 2xl:ml-2 w-screen'>
+            <div class='btn-p flex flex-col mt-2 lg:ml-2 lg:mt-4 xl:mt-2 xl:ml-0 w-screen'>
               <p class='color-g font-semibold'>{content.test.b31}</p>
               <p class='color-g'>{content.test.b32}</p>
             </div>
@@ -566,7 +566,7 @@ function Smartdress(props) {
           </div>
         </div>
         <div class='flex flex-col mt-16'>
-          <h3>{content.test.title5}</h3>
+          <h3 class='font-semibold'>{content.test.title5}</h3>
           <div class='flex flex-col'>
             <p class='font-semibold mt-4'>{content.test.subtitle5}</p>
             <p>{content.test.text5}</p>
@@ -579,6 +579,33 @@ function Smartdress(props) {
             <p>{content.test.text6}</p>
             <img class='mt-8' src={u3} />
           </div>
+        </div>
+      </div>
+
+      <div className='flex flex-col text-center px-4 mx-8 sm:mx-16 mt-8 md:mt-32'>
+        <h4 class='font-semibold'>{content.contact.text1}</h4>
+        <h4 class='font-semibold'>{content.contact.text2}</h4>
+
+        <div className='flex flex-col items-center md:justify-center md:flex-row mt-8'>
+          <button
+            className='btn-3 mb-4 md:mb-0 md:mr-4 rounded shadow-md'
+            onClick={() =>
+              window.open('mailto:minkenberg-anne@web.de', '_blank')
+            }
+          >
+            {content.contact.btnMail}
+          </button>
+          <button
+            className='btn-2 md:ml-4 rounded shadow-md'
+            onClick={() =>
+              window.open(
+                'https://www.linkedin.com/in/anne-minkenberg-4a5961161/',
+                '_blank'
+              )
+            }
+          >
+            {content.contact.btnChat}
+          </button>
         </div>
       </div>
     </motion.div>

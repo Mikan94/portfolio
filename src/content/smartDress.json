@@ -316,6 +316,12 @@
       "text5": "Users can now set the reconsideration via the navigation item 'Outfit'. The interviews showed that the users saw this item metaphorically as laundry.",
       "subtitle6": "Adding more attributs for clothes",
       "text6": "The form was extended, since some test persons had difficulty assigning feelings to their items of clothing and simply felt it with occasions. In addition, the desire was to be able to classify for themselves which article of clothing is worn at which time of year."
+    },
+    "contact": {
+    "text1": "You like what you see?",
+    "text2": "Then let's talk and create digital projects together",
+    "btnMail": "Send carrier pigeon",
+    "btnChat": "Have a chat"
     }
   }
 }

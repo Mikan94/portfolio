@@ -225,7 +225,7 @@ function Storyline(props) {
         <h2 class='color-y'>{content.overview.q}</h2>
         <div class='flex flex-col'>
           <div class='flex flex-col mt-8'>
-            <h4>Problem</h4>
+            <h4 class='font-semibold'>Problem</h4>
             <p>
               {content.overview.qt1}
               <text>
@@ -245,7 +245,7 @@ function Storyline(props) {
             </p>
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.overview.t3}</h4>
+            <h4 class='font-semibold'>{content.overview.t3}</h4>
             <p>{content.overview.t4}</p>
           </div>
         </div>
@@ -278,26 +278,26 @@ function Storyline(props) {
         <h2 class='color-y'>{content.ui.title}</h2>
         <p>{content.ui.t1}</p>
         <div class='flex flex-col mt-16'>
-          <h3>{content.ui.title2}</h3>
+          <h3 class='font-semibold'>{content.ui.title2}</h3>
           <p>{content.ui.text2}</p>
           <img class='mt-8' src={flow} />
         </div>
         <div class='flex flex-col mt-16'>
-          <h3>Wireframes</h3>
+          <h3 class='font-semibold'>Wireframes</h3>
           <p>{content.ui.text3}</p>
           <img class='mt-8' src={wire} />
         </div>
 
         <div class='flex flex-col mt-16'>
-          <h3 class=''>Styleguide</h3>
+          <h3 class='font-semibold'>Styleguide</h3>
           <p>{content.ui.text4}</p>
           <div class='flex flex-col mt-16'>
-            <h4>{content.ui.title5}</h4>
+            <h4 class='font-semibold'>{content.ui.title5}</h4>
             <p>{content.ui.text5}</p>
             <img class='mt-8 w-48' src={logo} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.ui.title6}</h4>
+            <h4 class='font-semibold'>{content.ui.title6}</h4>
             <p>{content.ui.text6}</p>
 
             <div class='flex flex-col'>
@@ -315,7 +315,7 @@ function Storyline(props) {
           </div>
 
           <div class='flex flex-col mt-16'>
-            <h4>{content.ui.title7}</h4>
+            <h4 class='font-semibold'>{content.ui.title7}</h4>
             <p>{content.ui.text71}</p>
             <img class='mt-4 lg:pr-96' src={typo1} />
             <p class='mt-16'>{content.ui.text72}</p>
@@ -326,27 +326,27 @@ function Storyline(props) {
         <div id='solution' class='flex flex-col mt-48'>
           <h2 class='color-y'>{content.product.head}</h2>
           <div class='flex flex-col mt-4'>
-            <h4>Login</h4>
+            <h4 class='font-semibold'>Login</h4>
             <p>{content.product.text}</p>
             <img class='mt-4' src={f1} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.product.title2}</h4>
+            <h4 class='font-semibold'>{content.product.title2}</h4>
             <p>{content.product.text2}</p>
             <img class='mt-4' src={f2} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>Onboarding</h4>
+            <h4 class='font-semibold'>Onboarding</h4>
             <p>{content.product.text3}</p>
             <img class='mt-4' src={f3} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.product.title4}</h4>
+            <h4 class='font-semibold'>{content.product.title4}</h4>
             <p>{content.product.text4}</p>
             <img class='mt-4' src={f4} />
           </div>
           <div class='flex flex-col mt-16'>
-            <h4>{content.product.title5}</h4>
+            <h4 class='font-semibold'>{content.product.title5}</h4>
             <p>{content.product.text5}</p>
             <img class='mt-4' src={f5} />
             <video

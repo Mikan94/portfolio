@@ -15,23 +15,17 @@ function About(props) {
 
   return (
     <section id='about' className='container mx-auto'>
-      <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80 '>
+      <h1 className='text-center mx-8 sm:mx-8 lg:mx-32 xl:mx-48 lg:-mt-24 2xl:mx-80'>
         {content.title}
       </h1>
 
-      <div className='flex flex-col md:flex-row md:justify-around mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 mt-16 md:mt-24'>
-        <div className='flex justify-center items-center'>
-          <img
-            className='img-change relative w-80 sm:w-80 md:mx-32 2xl:w-full z-10 self-center shadow-lg order-1'
-            alt='img'
-          />
-        </div>
-        <div className='flex flex-col order-2 text-center items-center md:my-auto md:z-10 mt-8 px-2 md:ml-8 xl:pr-16'>
+      <div className='flex flex-col md:flex-row md:justify-around mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 mt-0 md:mt-8'>
+        <div className='flex flex-col order-2 md:my-auto md:z-10 mt-8 sm:px-16 md:px-4 xl:pr-16'>
           <p className=''>{content.text1}</p>
           <p>{content.text2}</p>
           <p class='mt-4'>{content.text3}</p>
 
-          <Link to='/whoiam'>
+          <Link to='/whoiam' class='self-center lg:self-start'>
             <button
               class='btn-4-y mt-8'
               onClick={() => {
@@ -41,6 +35,12 @@ function About(props) {
               {content.btn}
             </button>
           </Link>
+        </div>
+        <div className='flex justify-center items-center order-1 md:order-2 mt-8 md:mt-0'>
+          <img
+            className='img-change rounded relative sm:w-80 md:mx-32 2xl:w-full z-10 self-center shadow-lg order-1'
+            alt='img'
+          />
         </div>
       </div>
     </section>

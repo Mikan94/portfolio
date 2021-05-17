@@ -37,7 +37,7 @@ function App() {
                 }}
               />
               <Hero language={language} />
-              <div class='spacing' />
+   
               <Projects language={language} />
             </Route>
           </Switch>

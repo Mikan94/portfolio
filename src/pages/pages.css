@@ -40,34 +40,6 @@
   color: #2c333b;
 }
 
-h2 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 36px;
-}
-
-h3 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 28px;
-  font-weight: 600;
-}
-
-h4 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-h5 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-p {
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
 
 .btn-p {
   background-color: white;

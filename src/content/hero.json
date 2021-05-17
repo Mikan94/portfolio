@@ -1,14 +1,16 @@
 {
   "Deutsch": {
-    "title1": "Hi, ich bin Anne",
-    "title2": "und ich transformiere Probleme in ein digitales vertrautes Zuhause.",
-    "description1": "Als Lösungssucherin aka UX/UI Designer mit betriebswirtschaftlichem Hintergrund kreiere ich digitale Produkte für die Probleme der Menschen, die ihnen Zeit und ein Gefühl von 'nach Hause kommen' zurückgeben.",
-    "description2": "Geheime Waffen: Ich bin auch ein React.js-Rookie und Abenteuer-Radfahrer."
+    "title": "ich bin Anne!",
+    "d2": "Als UX/UI Designerin entwickle ich digitale Produkte, die das Leben der Menschen verbessern.",
+    "d3": "Nebenbei experimentiere ich mit React.js und erkunde die Welt mit meinem Radl.",
+    "d4": "Aktuell bin ich auf der Suche nach meinem ersten Vollzeit-Abenteuer.",
+    "btn": "Lass uns reden"
   },
   "English": {
-    "title1": "Hello, I'm Anne",
-    "title2": "and I transform problems in digital sweet homes.",
-    "description1": "As a solution seeker aka UX/UI Designer with a background in business I create digital products to people problems that give their back time and a sense of coming home.",
-    "description2": "Secret weapons: I'm also a React.js Rookie and adventure cyclist"
+    "title": "I'm Anne!",
+    "d2": "As a UX/UI designer, I create digital products that improve people's lives.",
+    "d3": "On the side I experiment with React.js and explore the world with my bike.",
+    "d4": "Currently, I am looking for my first full-time adventure.",
+    "btn": "Let's talk"
   }
 }

@@ -46,12 +46,12 @@ function Navbar(props) {
         <LinkR to='/'>
           <Link
             to='/'
-            className='flex z-50 lg:text-xl color-y cursor-pointer'
+            className='flex z-50 cursor-pointer color-y'
             smooth={true}
             duration={1000}
             onClick={closeMobileMenu}
           >
-            Anne Minkenberg
+            <li class='list-none color-y font-semibold'>Anne Minkenberg</li>
           </Link>
         </LinkR>
 
@@ -77,10 +77,10 @@ function Navbar(props) {
               spy={true}
               exact={true}
               activeClass='active'
-              className='text-xl lg:text-lg link nav-link'
+              className='link nav-link'
               onClick={closeMobileMenu}
             >
-              {content.nav1}
+            {content.nav1}
             </Link>
           </li>
           <li className='flex justify-between mx-8 my-8 md:my-4 md:ml-12 md:mr-12'>
@@ -90,7 +90,7 @@ function Navbar(props) {
               duration={1000}
               spy={true}
               activeClass='active'
-              className='text-xl lg:text-lg link nav-link'
+              className='link nav-link'
               onClick={closeMobileMenu}
             >
               {content.nav2}
@@ -104,7 +104,7 @@ function Navbar(props) {
               spy={true}
               exact={true}
               activeClass='active'
-              className='text-xl lg:text-lg link nav-link '
+              className='link nav-link '
               onClick={closeMobileMenu}
             >
               {content.nav3}

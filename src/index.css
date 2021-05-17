@@ -11,17 +11,16 @@ body {
   background-color: #2c333b;
   background-size: contain;
   background-repeat: repeat-y;
-
   margin: 0;
   padding: 0;
 }
 
 .spacing {
-  margin-top: 24rem;
+  margin-top: 20rem;
 }
 
 .card-spacing {
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .color-y {
@@ -45,68 +44,61 @@ body {
   background-color: #ffbd53;
 }
 
+
+
 h1 {
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: transparent;
   font-family: 'Rubik Mono One', sans-serif;
+  color: #2c333b;
   letter-spacing: 8px;
   word-spacing: -16px;
-}
-
-.h1-copy {
-  -webkit-text-stroke: 1px white;
-  -webkit-text-fill-color: #2c333b;
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 64px;
-  letter-spacing: 8px;
-  word-spacing: -16px;
-}
-
-.text-hero {
-  font-family: 'Rubik', sans-serif;
-  line-height: 64px;
+  font-size: 80px;
 }
 
 h2 {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 56px;
   letter-spacing: 2px;
   color: white;
-  line-height: 4rem;
 }
 
 h3 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 36px;
+  letter-spacing: 2px;
   color: white;
-  line-height: 2.5rem;
-}
 
-.h3-bold {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: white;
-  line-height: 2.5rem;
 }
 
 h4 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: white;
+}
+
+h5 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+
+p {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: white;
 }
 
-p,
-li,
-text {
+li {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
-  line-height: 2rem;
 }
 
 .logo {
@@ -122,6 +114,23 @@ text {
 
 .shadow {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-text {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  font-size: 200px;
+}
+
+.hero-subtext{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 24px; 
 }
 
 .btn {
@@ -244,6 +253,7 @@ text {
 }
 
 .scroll-ani {
+  font-size: 16px;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   transform-origin: bottom;
@@ -374,7 +384,7 @@ text {
   transition: all 0.2s;
   border-radius: 5px;
   position: relative;
-  width: 200px;
+  width: 220px;
 }
 .btn-4::after {
   content: url(./assets/arrow.svg);
@@ -479,13 +489,13 @@ text {
 }
 
 .img-change {
-  content: url(./assets/aboutimg.jpeg);
+  content: url(./assets/about2.png);
   transition: all 0.5s ease-in-out;
   border-radius: 5px;
 }
 
 .img-change:hover {
-  content: url(./assets/aboutimg2.jpeg);
+  content: url(./assets/bike.png);
   transform: scale(1.02);
   transition: all 0.5s ease-in-out;
 }
@@ -518,4 +528,76 @@ text {
 
 .link-ex:hover {
   color: #ffbd53;
+}
+
+.hero-bg {
+  content: url(./assets/blob.svg);
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .spacing {
+    margin-top: 10rem;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .spacing {
+    margin-top: 16rem;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  h1 {
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Rubik Mono One', sans-serif;
+    color: #2c333b;
+    letter-spacing: 8px;
+    word-spacing: -16px;
+    font-size: 80px;
+  }
+  
+  h2 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: white;
+  }
+  
+  h3 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: white;
+  }
 }

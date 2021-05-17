@@ -1,6 +1,7 @@
 import React from 'react';
 import x from '../assets/x.svg';
 import data from '../content/aboutDetail.json';
+import img from '../assets/about.png';
 
 import { useHistory } from 'react-router-dom';
 
@@ -25,16 +26,17 @@ function Who(props) {
         </button>
       </div>
       <div className='flex flex-col lg:flex-row mx-8 sm:mx-16 md:mx-28 xl:mx-48 2xl:mx-80 mt-16 md:mt-24 lg:mt-8'>
-        <div className='flex mt-8 justify-center items-center'>
-          <img
-            className='img-change relative w-80 sm:w-80 lg:w-96 2xl:ml-64 z-10 self-center shadow-lg order-1 lg:ml-40 lg:mr-16 xl:ml-64 xl:mr-16'
-            alt='img'
-          />
-        </div>
         <div className='flex flex-col items-center sm:items-start order-2 z-10 mt-8 sm:mx-4 lg:ml-24 lg:mr-8 xl:ml-40 md:mt-16 lg:mt-20 xl:mt-8'>
           <p className=''>{content.intro.text1}</p>
           <p className='mb-8'>{content.intro.text2}</p>
           <p className=''>{content.intro.text3}</p>
+        </div>
+        <div className='flex mt-8 justify-center items-center'>
+          <img
+            src={img}
+            className=' rounded relative w-80 sm:w-80 lg:w-96 2xl:ml-64 z-10 self-center shadow-lg order-1 lg:ml-40 lg:mr-16 xl:ml-64 xl:mr-16'
+            alt='img'
+          />
         </div>
       </div>
       <div className='flex flex-col items-center order-2 text-base z-10 mt-32 sm:mx-12 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>

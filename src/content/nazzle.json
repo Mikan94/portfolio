@@ -68,6 +68,13 @@
       "text11": "Sobald der Benutzer ein sicheres Terrain erreicht hat, werden im Menüfenster alle verfügbaren Puzzles angezeigt. Diese werden in der Anzeige unterschieden in: freigeschaltet noch nicht gespielt, freigeschaltet und gespielt oder noch nicht freigeschaltet. Durch Anklicken des gewünschten Rätsels und anschließendem 'Spiel starten' wird der Spieler direkt in das Rätsel geführt.",
       "subsub12": "In-Game",
       "text12": "Grundsätzlich sind die Rätsel so aufgebaut, dass die Augmented Reality-Technologie Objekte in der Umgebung anzeigt, die bei der Lösung des Rätsels helfen. Der Benutzer hat die Möglichkeit, verschiedene Objekte zu kombinieren und ein neues zu erstellen oder ein Objekt direkt als Lösung für das Rätsel zu verwenden. Wenn der Benutzer keine Idee hat, wie er das Rätsel lösen kann, erscheint die Figur aus dem Onboarding als Unterstützung, indem er auf das Fragezeichen rechts klickt."
+    },
+    "contact": {
+      "title": "Kontakt",
+    "text1": "Gefällt dir was du siehst?",
+    "text2": "Dann lassen uns reden und gemeinsam digitale Projekte kreiieren",
+    "btnMail": "Brieftaube versenden",
+    "btnChat": "Flotten Schnack"
     }
   },
 
@@ -140,6 +147,13 @@
       "text11": "As soon as the user has reached a safe terrain, all available puzzles are displayed in the menu window. These are distinguished in the display in: unlocked not yet played, unlocked and played or not yet unlocked. By clicking on the desired puzzle and then 'Start game' the player is led directly into the puzzle.",
       "subsub12": "In-Game",
       "text12": "Basically, the puzzles are constructed in such a way that the Augmented Reality technology displays objects in the environment that help to solve the puzzle. The user has the possibility to combine different objects and create a new one or to use an object directly as a solution for the puzzle. If the user has no idea how to solve the puzzle, the figure from the onboarding appears as a support by clicking to the question mark right."
+    },
+    "contact": {
+      "title": "Contact",
+    "text1": "You like what you see?",
+    "text2": "Then let's talk and create digital projects together",
+    "btnMail": "Send carrier pigeon",
+    "btnChat": "Have a chat"
     }
   }
 }

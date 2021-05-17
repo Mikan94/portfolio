@@ -13,10 +13,10 @@ function Projects(props) {
 
   return (
     <div id='projects' className='container mx-auto'>
-      <h1 className='text-center text-4xl lg:text-6xl mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80'>
+      <h1 className='text-center mx-4 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 mt-80 md:mt-0'>
         {content.head}
       </h1>
-      <div class='mt-16 md:mt-24'>
+      <div class='-mt-8 md:mt-8'>
         <CardItems
           bg='bg-smartdress'
           title={content.SmartDress.title}
