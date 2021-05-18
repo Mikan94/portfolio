@@ -81,12 +81,7 @@ function Smartdress(props) {
   );
 
   return (
-    <motion.div
-      onAnimationComplete={() => setCanScroll(true)}
-      initial='initial'
-      animate='animate'
-      exit='exit'
-    >
+    <div>
       <div class=''>
         <button
           class='btn fixed top-4 right-4 sm:top-8 sm:right-8 bg-white transform hover:scale-110 transition duration-500 ease-in-out focus:outline-none'
@@ -581,34 +576,7 @@ function Smartdress(props) {
           </div>
         </div>
       </div>
-
-      <div className='flex flex-col text-center px-4 mx-8 sm:mx-16 mt-8 md:mt-32'>
-        <h4 class='font-semibold'>{content.contact.text1}</h4>
-        <h4 class='font-semibold'>{content.contact.text2}</h4>
-
-        <div className='flex flex-col items-center md:justify-center md:flex-row mt-8'>
-          <button
-            className='btn-3 mb-4 md:mb-0 md:mr-4 rounded shadow-md'
-            onClick={() =>
-              window.open('mailto:minkenberg-anne@web.de', '_blank')
-            }
-          >
-            {content.contact.btnMail}
-          </button>
-          <button
-            className='btn-2 md:ml-4 rounded shadow-md'
-            onClick={() =>
-              window.open(
-                'https://www.linkedin.com/in/anne-minkenberg-4a5961161/',
-                '_blank'
-              )
-            }
-          >
-            {content.contact.btnChat}
-          </button>
-        </div>
-      </div>
-    </motion.div>
+    </div>
   );
 }
 

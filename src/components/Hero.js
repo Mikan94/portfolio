@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import data from '../content/hero.json';
-import img from '../assets/about.png';
 import { Link } from 'react-scroll';
 import '../index.css';
-import blob from '../assets/blob.svg';
+
 
 function Hero(props) {
   let content = data;

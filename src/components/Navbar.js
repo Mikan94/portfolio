@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as LinkR } from 'react-router-dom';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 import data from '../content/navbar.json';
 
 function Navbar(props) {
@@ -9,6 +10,7 @@ function Navbar(props) {
     ? (content = data.Deutsch)
     : (content = data.English);
 
+  const transition = { duration: 0.5, ease: [0.6, 0.01, -0.05, 0.9] };
   const [click, setClick] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -16,6 +18,31 @@ function Navbar(props) {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const variantsDesktop = {
+    open: {
+      y: 0,
+      transition: {...transition}
+    },
+    closed: {
+      y: -80,
+      transition: {...transition},
+    },
+  }
+
+  const variantsMobile = {
+    mobileOpen: {
+      opacity: 0,
+      x: "100%",
+      transition: { ...transition},
+    },
+    mobileClosed: {
+      opacity: 1,
+      x: 0,
+      transition: {delay: 0.3, ...transition}
+    }
+  }
+
+  
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
 
@@ -36,13 +63,12 @@ function Navbar(props) {
 
   return (
     <nav id='/' className='container '>
-      <div
-        className={
-          visible
-            ? 'bg-primary text-lg font-semibold fixed shadow-md flex-row flex-wrap justify-between z-40 w-full py-6 lg:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'
-            : '-70px'
+      <motion.div
+        animate={
+          visible ? "open" : "closed"
         }
-      >
+        variants={variantsDesktop}
+        className='bg-primary text-lg font-semibold fixed shadow-md flex-row flex-wrap justify-between z-40 w-full py-6 lg:py-2 flex items-center px-8 sm:px-16 lg:px-32 xl:px-48 2xl:px-80'>
         <LinkR to='/'>
           <Link
             to='/'
@@ -62,11 +88,15 @@ function Navbar(props) {
             }
           />
         </div>
-        <ul
-          className={
+        <motion.ul
+          // animate={
+          //   click ? "mobileClosed" : "mobileOpen"
+          // }
+          // variants={variantsMobile}
+          class={
             click
-              ? 'flex flex-col items-center w-full h-screen z-50 lg:top-0 lg:flex lg:flex-row lg:bg-transparent'
-              : 'hidden lg:flex lg:flex-row'
+               ? 'flex flex-col items-center w-full h-screen z-50 lg:top-0 lg:flex lg:flex-row lg:bg-transparent'
+               : 'hidden lg:flex lg:flex-row'
           }
         >
           <li className='flex justify-between pt-10 lg:pt-0 my-8 lg:my-4'>
@@ -120,8 +150,8 @@ function Navbar(props) {
               <option value='English'>🇺🇸</option>
             </select>
           </li>
-        </ul>
-      </div>
+        </motion.ul>
+      </motion.div>
     </nav>
   );
 }

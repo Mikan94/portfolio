@@ -42,7 +42,7 @@ function App() {
             </Route>
           </Switch>
         </AnimatePresence>
-        <AnimatePresence exitBeforeEnter>
+ 
           <Switch>
             <Route exact path='/project/smartdress'>
               <Smartdress language={language} />
@@ -58,7 +58,7 @@ function App() {
               <Who language={language} />
             </Route>
           </Switch>
-        </AnimatePresence>
+    
         <AnimatePresence>
           <Switch>
             <Route exact path='/project/smartdress' />

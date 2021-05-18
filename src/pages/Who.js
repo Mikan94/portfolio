@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import { useIntersection } from 'react-use';
+import gsap from 'gsap'; 
 import x from '../assets/x.svg';
 import data from '../content/aboutDetail.json';
-import img from '../assets/about.png';
+import img from '../assets/about2.png';
 
 import { useHistory } from 'react-router-dom';
 
@@ -12,6 +14,36 @@ function Who(props) {
     : (content = data.English);
 
   const history = useHistory();
+
+  const sectionRef = useRef(null);
+  const intersection = useIntersection(sectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5
+  })
+
+  const fadeIn = element => {
+    gsap.to(element, 1, {
+      opacity: 1,
+      y: -60,
+      ease: "power4.out",
+      stagger: {
+        amount: 0.3
+      }
+    });
+  };
+
+const fadeOut = element => {
+  gsap.to(element, 1, {
+    opacity: 0,
+    y: -20,
+    ease: "power4.out"
+  });
+};
+
+
+  intersection && intersection.intersectionRatio < 0.5 ?
+  fadeOut(".fadeIn") : fadeIn(".fadeIn");
 
   return (
     <section class='container mx-auto'>
@@ -95,7 +127,7 @@ function Who(props) {
         </ul>
       </div>
 
-      <div className='flex flex-col order-2 z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
+      <div ref={sectionRef} className='flex flex-col order-2 z-10 sm:mx-12 mt-32 md:mx-24 lg:mx-32 xl:mx-64 2xl:mx-96'>
         <h2 class='mx-8 color-y'>{content.knowledge.title}</h2>
         <ul class='list-none list-outside text-white'>
           <li class='flex flex-col lg:flex-row mt-8 mx-8 sm:mx-8'>
