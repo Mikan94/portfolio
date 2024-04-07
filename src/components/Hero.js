@@ -50,7 +50,7 @@ function Hero(props) {
             spy={true}
             exact={true}
           >
-            <button class="btn-3 mt-8">{content.btn}</button>
+            <button class="btn-4-y mt-8">{content.btn}</button>
           </Link>
         </div>
         <div class="flex flex-col order-2 md:my-auto mt-8 md:ml-8 xl:pr-16">
