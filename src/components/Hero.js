@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import data from "../content/hero.json";
 import { Link } from "react-scroll";
 import "../index.css";
-import smartdress from "../assets/smartdress.png";
+import moji from "../assets/moji.png";
 
 function Hero(props) {
   let content = data;
@@ -37,10 +37,10 @@ function Hero(props) {
   return (
     <section id="hero" className="container mx-auto hero">
       <div class="flex z-10 flex-col md:flex-row mx-8 sm:mx-16 lg:mx-32 xl:mx-48 2xl:mx-80 pt-12 md:pt-48">
-        <div class="flex flex-col md:-mt-16">
-          <p class="text-4xl font-bold color-y">Hi, {content.title}</p>
-          <p>{content.d2}</p>
-          <p class="my-4">{content.d3}</p>
+        <div class="flex flex-col justify-center md:-mt-16 w-80 mr-40">
+          <p class="text-4xl hero-headline color-y mb-4 leading-none">Hi,{content.title}</p>
+          <p class="leading-loose text-center md:text-left">{content.d2}</p>
+         {/*  <p class="my-4">{content.d3}</p> */}
           {/* <p>{content.d4}</p> */}
           <Link
             to="contact"
@@ -50,13 +50,13 @@ function Hero(props) {
             spy={true}
             exact={true}
           >
-            <button class="btn-4-y mt-8">{content.btn}</button>
+            <button class="btn-3 mt-8">{content.btn}</button>
           </Link>
         </div>
         <div class="flex flex-col order-2 md:my-auto mt-8 md:ml-8 xl:pr-16">
           <img
-            className="z-0 max-h-64 px-4 sm:max-h-80 order-1 lg:order-2 mx-auto my-12 sm:my-16 lg:mr-8 lg:max-h-96 xl:mr-16"
-            src={smartdress}
+            class="hidden md:block"
+            src={moji}
           ></img>
         </div>
       </div>

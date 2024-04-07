@@ -7,10 +7,10 @@
 }
 
 body {
-  background-image: url("./assets/bgHero.png");
+  background-image: url("./assets/bg2.png");
   background-color: #2c333b;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   margin: 0;
   padding: 0;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .color-y {
-  color: #ffd84b;
+  color: #FFBD53;
 }
 
 .color-g {
@@ -32,7 +32,7 @@ body {
 }
 
 .border-y {
-  border-color: #ffd84b;
+  border-color: #FFBD53;
   height: 30px;
 }
 
@@ -41,7 +41,16 @@ body {
 }
 
 .color-bg-y {
-  background-color: #ffd84b;
+  background-color: #FFBD53;
+}
+
+.hero-headline {
+  -webkit-text-stroke: 1px #FFBD53;
+  -webkit-text-fill-color: transparent;
+  font-family: "Rubik Mono One", sans-serif;
+  letter-spacing: 8px;
+  word-spacing: -16px;
+  font-size: 80px;
 }
 
 h1 {
@@ -106,7 +115,7 @@ li {
 }
 
 .logo:hover {
-  color: #ffd84b;
+  color: #FFBD53;
 }
 
 .shadow {
@@ -231,8 +240,8 @@ li {
 }
 
 .active {
-  border-bottom: 1px solid #ffd84b;
-  color: #ffd84b;
+  border-bottom: 1px solid #FFBD53;
+  color: #FFBD53;
 }
 
 .nav-link {
@@ -276,7 +285,7 @@ li {
 }
 
 .btn-2 {
-  background: #ffd84b;
+  background: #FFBD53;
   color: #2c333b;
   cursor: pointer;
   font-family: "Rubik", sans-serif;
@@ -323,7 +332,7 @@ li {
 }
 
 .btn-3 {
-  background: #ffd84b;
+  background: #FFBD53;
   color: #2c333b;
   cursor: pointer;
   font-family: "Rubik", sans-serif;

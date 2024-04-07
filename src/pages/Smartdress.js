@@ -575,6 +575,10 @@ function Smartdress(props) {
             <img class='mt-8' src={u3} />
           </div>
         </div>
+        <h2 class='mt-16 color-y'>Was nun?</h2>
+        <div>
+          <p>Seit 2023 befindet sich die App in der Umsetzung. So ganz einfach wie gedacht ist dies ehrlich gesagt nicht. 😅 Nachdem ich ein halbes Jahr damit verbracht habe alles über maschinelles Lernen und verschiedene Algorithmen zu lernen, die das Problem lösen könnten, bin ich daran gescheitert ein geeignetes Datenset für das Lernen zu finden. Nun ist die Entscheidung dahin gefallen das Feature, welches dem Nutzer ein Outfit vorschlagen soll mit einem Entscheidungsbaum abzudecken. Ob dies funktionieren wird, muss ich noch prüfen. Dafür habe ich aber schon mal kleine Features wie dem Hochladen von Kleidungsstücken implementiert. Hier konnte ich mein Wissen zu maschinellem Lernen anwenden sodass nun das Kleidungsstück während dem Hochladen analysiert wird und Farben und Art des Kleidungsstück erkennt. Das nächste Feature was dann folgte war das Anzeigen der gespeicherten Kleidungsstücke. Aber nun wird es aber auch Zeit tiefer in die Materie "Entscheidungsbaum" einzusteigen und zu prüfen, ob der Algorithmus die Lösung für das Outfitvorschlagen Problem ist. 🥳</p>
+        </div>
       </div>
     </div>
   );
